@@ -7,63 +7,42 @@ backend:
 publish_mode: editorial_workflow
 
 # Media and Public Folders https://www.netlifycms.org/docs/configuration-options/#media-and-public-folders
-media_folder: 'app/static/images/uploads' # Media files will be stored in the repo under images/uploads
+media_folder: 'assets/static/images/uploads' # Media files will be stored in the repo under images/uploads
 public_folder: '/images/uploads'
 
 # Collections https://www.netlifycms.org/docs/configuration-options/#collections
 collections:
-  - label: Settings
-    name: settings
-    files:
-      - label: General
-        name: general
-        format: json
-        file: 'app/content/settings/general.json'
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: 'Title Template', name: titleTemplate, widget: string }
-          - { label: 'Welcome Text', name: welcomeText, widget: markdown }
-          - { label: Logo, name: logo, widget: image }
-          - { label: Icon, name: icon, widget: image }
-          - { label: 'Loading Color', name: loadingColor, widget: string, default: '#000000' }
-          - { label: 'SEO Description', name: seoDescription, widget: text, required: false }
-          - { label: 'SEO Meta Image', name: seoMetaImage, widget: image, required: false }
-      - label: Manifest
-        name: manifest
-        format: json
-        file: 'app/content/settings/manifest.json'
-        fields:
-          - { label: Name, name: name, widget: string }
-          - { label: 'Short name', name: shortName, widget: string }
-          - { label: Description, name: description, widget: text }
-          - { label: 'Theme color', name: themeColor, widget: string }
-          - { label: 'Background color', name: backgroundColor, widget: string }
-          - { label: Lang, name: lang, widget: string, default: en }
-
-  - name: 'pages'
-    label: 'Pages'
-    folder: 'app/content/pages'
+  - name: 'events'
+    label: 'Events'
+    folder: 'assets/content/events'
     create: true
     slug: '{{slug}}'
     format: 'json'
     fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Subtitle, name: subtitle, widget: text, required: false }
-      - { label: Content, name: content, widget: markdown }
-      - { label: 'Featured Image', name: featuredImage, widget: image, required: false }
-      - { label: 'SEO Description', name: seoDescription, widget: text, required: false }
-      - { label: 'SEO Meta Image', name: seoMetaImage, widget: image, required: false }
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'app/content/blog'
+      - { label: Title, name: title, widget: string , required: true  }
+      - { label: Time, name: subtitle, widget: datetime, required: true  }
+      - { label: Description, name: description, widget: markdown }
+      - { label: 'Image', name: featuredImage, widget: image, required: true  }
+  - name: 'posts'
+    label: 'Posts'
+    folder: 'assets/content/posts'
     create: true
     slug: '{{slug}}'
     format: 'json'
-    sort: 'published_at:desc'
     fields:
-      - { label: Title, name: title, widget: string }
-      - { label: 'Published At', name: publishedAt, widget: date, format: 'Do MMM YYYY' }
-      - { label: Content, name: content, widget: markdown }
-      - { label: 'Featured Image', name: featuredImage, widget: image, required: false }
-      - { label: 'SEO Description', name: seoDescription, widget: text, required: false }
-      - { label: 'SEO Meta Image', name: seoMetaImage, widget: image, required: false }
+      - { label: Title, name: title, widget: string , required: true }
+      - { label: 'Published At', name: publishedAt, widget: date, format: 'Do MMM YYYY', required: true  }
+      - { label: Content, name: description, widget: markdown , required: true }
+      - { label: 'Image', name: featuredImage, widget: image, required: true }
+  - name: 'obituaries'
+    label: 'Obituaries'
+    folder: 'assets/content/obituaries'
+    create: true
+    slug: '{{slug}}'
+    format: 'json'
+    fields:
+      - { label: Name, name: name, widget: string , required: true }
+      - { label: Age, name: age, widget: number , required: true , value_type: "int", min: 1 , max: 101}
+      - { label: Address, name: address, widget: markdown }
+      - { label: 'Funeral At', name: funeralAt, widget: datetime , required: true }
+      - { label: About, name: about, widget: string}
