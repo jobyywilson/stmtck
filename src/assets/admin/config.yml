@@ -17,10 +17,11 @@ collections:
     folder: 'src/assets/content/events'
     create: true
     slug: '{{slug}}'
+    widget: list
     format: 'json'
     fields:
       - { label: Title, name: title, widget: string , required: true  }
-      - { label: Time, name: subtitle, widget: datetime, required: true  }
+      - { label: Time, name: time, widget: datetime, required: true  }
       - { label: Description, name: description, widget: markdown }
       - { label: 'Image', name: featuredImage, widget: image, required: true  }
   - name: 'posts'
