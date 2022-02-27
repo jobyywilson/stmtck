@@ -133,8 +133,8 @@
                 <div class="col-lg-4 col-md-6 col-sm-6 news-card" *ngFor="let event  of eventList.slice(0, 3);" >
                   <div class="row  step post-entry">
                     <div class="col-md-6">
-                      <a href="blog-single.html" class="d-block">
-                        <img src="assets/img/img_1.jpg" alt="Image" class="img-fluid">
+                      <a href="#" class="d-block">
+                        <img [src]="event.featuredImage" alt="Image" class="image-event img-fluid">
                       </a>
                     </div>
                     <div class="col-md-6 post-text">

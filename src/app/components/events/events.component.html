@@ -1,0 +1,21 @@
+<section id="events" class="events">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row">
+        <div class="col-md-6 d-flex align-items-stretch" *ngFor="let event  of eventList">
+          <div class="card">
+            <div class="card-img">
+              <img src="assets/img/img_1.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><a href="">{{event.name}}</a></h5>
+              <p class="fst-italic text-center">{{event.date}}</p>
+              <p class="card-text">{{event.description}}</p>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+
+    </div>
+  </section>

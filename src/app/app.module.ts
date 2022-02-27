@@ -16,6 +16,7 @@ import { OfficeBeatersComponent } from './components/office-beaters/office-beate
 import { FoundersComponent } from './components/founders/founders.component';
 import { OrganisationComponent } from './components/organisation/organisation.component';
 import { OfficeComponent } from './components/office/office.component';
+import { EventsComponent } from './components/events/events.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { OfficeComponent } from './components/office/office.component';
     OfficeBeatersComponent,
     FoundersComponent,
     OrganisationComponent,
-    OfficeComponent
+    OfficeComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,

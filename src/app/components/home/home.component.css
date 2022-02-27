@@ -69,4 +69,6 @@
     justify-content: center;
     align-items: center;
   }
-  
+  .image-event{
+    max-height: 126px;
+  }

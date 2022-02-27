@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { combineLatest } from 'rxjs';
 import { CommonService } from 'src/app/services/common.service';
 declare var Swiper: any;
