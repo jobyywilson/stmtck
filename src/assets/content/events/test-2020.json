@@ -1,6 +1,6 @@
 {
-  "time": "2022-02-20T08:30:25.771Z",
+  "time": "2021-02-20T08:30:25.771Z",
   "title": "test 2020",
-  "description": "hello",
+  "description": "this.value is getting from other function. The problem is that this.newVariable is empty. I'm sure this is because the subscribe hasn't finished before I try to access this.Variable Is there any way to wait for the subscribe to finish before I do anything else?",
   "featuredImage": "/images/uploads/stmtc_1.jpeg"
 }

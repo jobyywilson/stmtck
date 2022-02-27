@@ -1,0 +1,314 @@
+[
+    {
+        "slNo": 1,
+        "name": "Rev. Yakoob Kathanar",
+        "address": " Adangapurathu",
+        "startDate": "1909",
+        "profilePic": "assets/img/former-vicars/Yakoob Kathanar.jpeg",
+        "phone": "",
+        "emailAddress": "",
+        "endDate": "1912"
+    },
+    {
+        "slNo": 2,
+        "name": "Rev. K. E Jacob",
+        "address": " Kalamannil",
+        "startDate": "1912",
+        "profilePic": "assets/img/former-vicars/blank-profile-picture.png",
+        "phone": "",
+        "emailAddress": "",
+        "endDate": "1942"
+    },
+    {
+        "slNo": 3,
+        "name": "Rev. Daveed Kassessa",
+        "address": " Thannickal,Kunnamkulam",
+        "startDate": "1942",
+        "profilePic": "assets/img/former-vicars/blank-profile-picture.png",
+        "phone": "",
+        "emailAddress": "",
+        "endDate": "1943"
+    },
+    {
+        "slNo": 4,
+        "name": "Rev. Abraham Mathew",
+        "address": " Valakom",
+        "startDate": "1942",
+        "profilePic": "assets/img/former-vicars/blank-profile-picture.png",
+        "phone": "",
+        "emailAddress": "",
+        "endDate": "1944"
+    },
+    {
+        "slNo": 5,
+        "name": "Rev. P. I Jacob",
+        "address": " Pooyappalli",
+        "startDate": "1943",
+        "profilePic": "assets/img/former-vicars/blank-profile-picture.png",
+        "phone": "",
+        "emailAddress": "",
+        "endDate": "1944"
+    },
+    {
+        "slNo": 6,
+        "name": "Rev. N. M. Philipose",
+        "address": " Naranganam",
+        "startDate": "1944",
+        "profilePic": "assets/img/former-vicars/blank-profile-picture.png",
+        "phone": "",
+        "emailAddress": "",
+        "endDate": "1945"
+    },
+    {
+        "slNo": 7,
+        "name": "Rev. N. K. Yohannan",
+        "address": " Bhudhanoor",
+        "startDate": "1945",
+        "profilePic": "assets/img/former-vicars/N. K. Yohannan.jpeg",
+        "phone": "",
+        "emailAddress": "",
+        "endDate": "1950"
+    },
+    {
+        "slNo": 8,
+        "name": "Rev. T. A Thomas",
+        "address": " Vadasserikkara",
+        "startDate": "1950",
+        "profilePic": "assets/img/former-vicars/blank-profile-picture.png",
+        "phone": "",
+        "emailAddress": "",
+        "endDate": "1954"
+    },
+    {
+        "slNo": 9,
+        "name": "Rev. P. T George",
+        "address": " Keezhuvaipur",
+        "startDate": "1954",
+        "profilePic": "assets/img/former-vicars/blank-profile-picture.png",
+        "phone": "",
+        "emailAddress": "",
+        "endDate": "1958"
+    },
+    {
+        "slNo": 10,
+        "name": "Rev. N. V George",
+        "address": " Thumpomon",
+        "startDate": "1958",
+        "profilePic": "assets/img/former-vicars/nvgeorge.jpeg",
+        "phone": "",
+        "emailAddress": "",
+        "endDate": "1961"
+    },
+    {
+        "slNo": 11,
+        "name": "Rev. K. I. Thomas",
+        "address": " Kaviyoor",
+        "startDate": "1961 May",
+        "profilePic": "assets/img/former-vicars/rev k i thomas.jpeg",
+        "phone": "",
+        "emailAddress": "",
+        "endDate": "1965 April",
+        "reference":"http://stthomasmtck.blogspot.com/2009/04/former-vicars.html"
+    },
+    {
+        "slNo": 12,
+        "name": "Rev. C. K. Mathai",
+        "address": " Thuruthicad",
+        "startDate": "1965 May",
+        "profilePic": "assets/img/former-vicars/c k mathai.png",
+        "phone": "",
+        "emailAddress": "",
+        "endDate": "1969 April",
+        "reference":"https://www.facebook.com/MalabarSyrianMarThoma/photos/a.298344364948555/338427484273576/?type=3&_rdr"
+    },
+    {
+        "slNo": 13,
+        "name": "Rev. A. I Jacob",
+        "address": " Pariyaram ( Mallappally )",
+        "startDate": "1969 May",
+        "profilePic": "assets/img/former-vicars/blank-profile-picture.png",
+        "phone": "",
+        "emailAddress": "",
+        "endDate": "1975 April"
+    },
+    {
+        "slNo": 14,
+        "name": "Rev. A. Mathew",
+        "address": " Anicad (Mallappally)",
+        "startDate": "1975 May",
+        "profilePic": "assets/img/former-vicars/a132.jpeg",
+        "phone": "",
+        "emailAddress": "",
+        "endDate": "1979 April"
+    },
+    {
+        "slNo": 15,
+        "name": "Rev. Varghese Thomas",
+        "address": " Anicad (Mallappally)",
+        "startDate": "1979 May",
+        "profilePic": "assets/img/former-vicars/Varghese-Thomas-Anicadu.jpeg",
+        "phone": "9961221152, 0469 2663735",
+        "emailAddress": "varghesethomasachen@gmail.com",
+        "endDate": "1982 April"
+    },
+    {
+        "slNo": 16,
+        "name": "Rev. A. P. Jacob",
+        "address": " Othara",
+        "startDate": "1982 May",
+        "profilePic": "assets/img/former-vicars/A-P-JACOB.jpeg",
+        "phone": "0469-2656853",
+        "emailAddress": "",
+        "endDate": "1984 April"
+    },
+    {
+        "slNo": 17,
+        "name": "Rev. P. G. George",
+        "address": " Thiruvalla",
+        "startDate": "1984 May",
+        "profilePic": "assets/img/former-vicars/blank-profile-picture.png",
+        "phone": "",
+        "emailAddress": "",
+        "endDate": "1989 April"
+    },
+    {
+        "slNo": 18,
+        "name": "Rev. John N. Abraham",
+        "address": " Chengannoor",
+        "startDate": "1989 May",
+        "profilePic": "assets/img/former-vicars/JOHN-N-ABRAHAM-391.jpeg",
+        "phone": "9947742953",
+        "emailAddress": "johnna@rediffmail.com",
+        "endDate": "1993 April"
+    },
+    {
+        "slNo": 19,
+        "name": "Rev. P. S. Thomas",
+        "address": " Naranganam",
+        "startDate": "1993 May",
+        "profilePic": "assets/img/former-vicars/P-S-THOMAS.jpeg",
+        "phone": "9447184900",
+        "emailAddress": "revpsthomas@gmail.com",
+        "endDate": "1995 April"
+    },
+    {
+        "slNo": 20,
+        "name": "Rev. I. C. Philip",
+        "address": " Ayroor",
+        "startDate": "1995 May",
+        "profilePic": "assets/img/former-vicars/I-C-PHILIP-0001.jpeg",
+        "phone": "",
+        "emailAddress": "",
+        "endDate": "1995 Nov."
+    },
+    {
+        "slNo": 21,
+        "name": "Rev. Alexander Abraham",
+        "address": " Thalavady",
+        "startDate": "1995 Dec",
+        "profilePic": "assets/img/former-vicars/REV.A.ABRAHAM.jpg",
+        "phone": "",
+        "emailAddress": "",
+        "endDate": "1995 Dec"
+    },
+    {
+        "slNo": 22,
+        "name": "Rev. Sam George",
+        "address": " Kidangannoor",
+        "startDate": "1996 Jan.",
+        "profilePic": "assets/img/former-vicars/Sam-George-Kidangannur.jpeg",
+        "phone": "9447592359",
+        "emailAddress": "samthekkumkara@gmail.com",
+        "endDate": "1997 April"
+    },
+    {
+        "slNo": 23,
+        "name": "Rev. M.V George",
+        "address": " Ayroor",
+        "startDate": "1997 Apr",
+        "profilePic": "assets/img/former-vicars/M V George.png",
+        "phone": "",
+        "emailAddress": "",
+        "endDate": "2000 Apr"
+    },
+    {
+        "slNo": 24,
+        "name": "Rev. T. C Mammen",
+        "address": " Pathanapuram",
+        "startDate": "2000 May",
+        "profilePic": "assets/img/former-vicars/REV-T-C-MAMMEN.jpeg",
+        "phone": "",
+        "emailAddress": "",
+        "endDate": "2002 Oct."
+    },
+    {
+        "slNo": 25,
+        "name": "Rev. George Zachariah",
+        "address": " Keezhuvaipur",
+        "startDate": "2002 Oct.",
+        "profilePic": "assets/img/former-vicars/GEORGE-ZACHARIAH-P.jpeg",
+        "phone": "94471067770, 469 2681868",
+        "emailAddress": "",
+        "endDate": "2003 April"
+    },
+    {
+        "slNo": 26,
+        "name": "Rev. Mathews George",
+        "address": " Thuruthicad",
+        "startDate": "2003 May",
+        "profilePic": "assets/img/former-vicars/Rev.-Mathews-George.jpg",
+        "phone": "09769391772",
+        "emailAddress": "mtwsgeorge@gmail.com",
+        "endDate": "2004 April"
+    },
+    {
+        "slNo": 27,
+        "name": "Rev. K. Ninan George",
+        "address": " Thumpomon",
+        "startDate": "2004 May",
+        "profilePic": "assets/img/former-vicars/NINAN-GEORGE-K.jpeg",
+        "phone": "9447803543, 9656246649",
+        "emailAddress": "",
+        "endDate": "2007 April"
+    },
+    {
+        "slNo": 28,
+        "name": "Rev. Kurian Alexander",
+        "address": " Thalavady",
+        "startDate": "2007 May",
+        "profilePic": "assets/img/former-vicars/KURIEN-ALEXANDER.jpeg",
+        "phone": "",
+        "emailAddress": "",
+        "endDate": "2010 April"
+    },
+    {
+        "slNo": 29,
+        "name": "Rev. Dr. T.T. Zachariah",
+        "address": " Kallisserry",
+        "startDate": "2010 May",
+        "profilePic": "assets/img/former-vicars/Zachariah-TT.jpeg",
+        "phone": "",
+        "emailAddress": "",
+        "endDate": "2013 April"
+    },
+    {
+        "slNo": 30,
+        "name": "Rev.Varghese Georege",
+        "address": "",
+        "startDate": "2013 May",
+        "profilePic": "assets/img/former-vicars/VARGHESE-GEORGE.jpeg",
+        "phone": "",
+        "emailAddress": "",
+        "endDate": "2016 April"
+    },
+    {
+        "slNo": 31,
+        "name": "Rev A Y Varughese",
+        "address": "",
+        "startDate": "2016 May",
+        "profilePic": "assets/img/former-vicars/A-Y-VARGHESE-8911.jpeg",
+        "phone": "",
+        "emailAddress": "",
+        "endDate": "2019 April"
+    }
+]

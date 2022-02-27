@@ -1,0 +1,93 @@
+<section id="office" class="members">
+    <div class="container">
+        <div class="row mb-5 align-items-end">
+            <div class="col-md-6" data-aos="fade-up">
+    
+              <h2>List of Kaisthanasamithy Members</h2>
+
+            </div>
+            </div>
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch member-alin" *ngFor="let member of officeMembers">
+          <div class="member">
+            <h5>{{member.postion}}</h5>
+            <div class="member-img">
+              <img src="assets/img/blank-profile-picture.png" class="img-fluid off-mem-image" alt="">
+            </div>
+            <div class="member-info">
+              <h4>{{member.name}}</h4>
+              <p>{{member.address}}<br> Mob: {{member.mobile}}</p>
+              
+              
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <div class="member-img">
+              <img src="assets/img/blank-profile-picture.png" class="img-fluid" alt="">
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>Niall Katz</h4>
+              <span>Marketing</span>
+              <p>Aut ex esse explicabo quia harum ea accusamus excepturi. Temporibus at quia quisquam veritatis impedit. Porro laborum voluptatum sed necessitatibus a saepe. Deserunt laborum quasi consequatur voluptatum iusto sint qui fuga vel. Enim eveniet sed quibusdam rerum in. Non dicta architecto consequatur quo praesentium nesciunt.</p>
+            </div>
+          </div>
+        </div> -->
+
+      </div>
+      <div class="row mb-5 align-items-end">
+        <div class="col-md-6" data-aos="fade-up">
+
+          <h2>Auditors</h2>
+
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch member-alin" *ngFor="let member of auditors">
+                <div class="member">
+                  <div class="member-img">
+                    <img src="assets/img/blank-profile-picture.png" class="img-fluid off-mem-image" alt="">
+                  </div>
+                  <div class="member-info">
+                    <h4>{{member.name}}</h4>
+                    <p>{{member.address}}<br> Mob: {{member.mobile}}</p>
+                    
+                    
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="row mb-5 align-items-end">
+            <div class="col-md-6" data-aos="fade-up">
+    
+              <h2>Sexton</h2>
+    
+            </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch member-alin" *ngFor="let member of sextons">
+                    <div class="member">
+                      <div class="member-img">
+                        <img src="assets/img/blank-profile-picture.png" class="img-fluid off-mem-image" alt="">
+                      </div>
+                      <div class="member-info">
+                        <h4>{{member.name}}</h4>
+                        <p>{{member.address}}<br> Mob: {{member.mobile}}</p>
+                        
+                        
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+
+    </div>
+  </section><!-- End Members Section -->
