@@ -7,7 +7,6 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
-import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { HistoryComponent } from './components/history/history.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
@@ -37,8 +36,7 @@ import { OfficeComponent } from './components/office/office.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    IvyCarouselModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
