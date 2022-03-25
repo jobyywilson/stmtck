@@ -80,7 +80,7 @@
   
         </div>
       </section>
-      <section class="section">
+      <section id="service-times" class="section">
         <div class="container">
   
           <div class="row justify-content-center text-center mb-5">
@@ -121,42 +121,34 @@
   
         </div>
       </section>
-    <section class="section">
-      
-        <div class="container">
-          <div class="col mb-5">
-            <div class="row sm-4">
-              <div class="col justify-content-center" data-aos="fade-up">
-                <h4 class="event-heading mb-4 sub-heading">Upcomming events</h4>
-              </div>
-              <div class="row" data-aos="fade-up">
-                <div class="col-lg-4 col-md-6 col-sm-6 news-card" *ngFor="let event  of eventList.slice(0, 3);" >
-                  <div class="row  step post-entry">
-                    <div class="col-md-6">
-                      <a href="#" class="d-block">
-                        <img [src]="event.featuredImage" alt="Image" class="image-event img-fluid">
-                      </a>
-                    </div>
-                    <div class="col-md-6 post-text">
-                      <span class="post-meta">{{event.date}}</span>
-                      <h3><a href="#" class="handle-overflow">{{event.title}}</a></h3>
-                      <p class="handle-overflow">{{event.description}}</p>
-                      <p><a href="#" class="readmore">Read more</a></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col align-to-center">
-                  <p><a href="#" class="btn btn-primary">View all</a></p>
-              </div>
-                
+    <section id="blog" class="section">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-left">
+
+          <h2>News and events</h2>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-md-6 col-lg-4 event"  *ngFor="let event  of eventList.slice(0, 3);">
+            <div class="block-blog text-left">
+              <a href="#"><img [src]="event.featuredImage"  alt="img"></a>
+              <div class="content-blog">
+                <h4><a href="#">{{event.title}}</a></h4>
+                <span>{{event.date}}</span>
+                <a class="float-end readmore" href="#">read more</a>
               </div>
             </div>
-           
+          </div>
+          <div class="col align-to-center">
+            <p><a href="/events" class="btn btn-primary">View all</a></p>
         </div>
-       
-        </div>
-    </section>
 
+
+        </div>
+      </div>
+    </section>
 
     <section class="section">
         

@@ -35,6 +35,7 @@ collections:
       - { label: 'Published At', name: publishedAt, widget: date, format: 'Do MMM YYYY', required: true  }
       - { label: Content, name: description, widget: markdown , required: true }
       - { label: 'Image', name: featuredImage, widget: image, required: true }
+      - { label: 'Gallery', name: galleryImages, widget: list, required: true ,summary: '{{fields.image}}',field: {label: Image, name: image, widget: image}}
   - name: 'obituaries'
     label: 'Obituaries'
     folder: 'src/assets/content/obituaries'

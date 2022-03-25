@@ -11,10 +11,15 @@ export class EventsComponent implements OnInit {
   constructor(private commonService : CommonService) { }
 
 
+
   eventList : any = [];
   postList : any = [];
 
   ngOnInit(): void {
+    let header = document.getElementById('header');
+    if(header){
+      header.style.backgroundColor = '#0291d9';
+    }
     this.loadData();
   }
 
@@ -30,5 +35,4 @@ export class EventsComponent implements OnInit {
         (err:any) => console.error(err)
         );
     }
-
 }

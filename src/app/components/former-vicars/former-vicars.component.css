@@ -1,89 +1,46 @@
-#former-vicars{
-    padding: 7rem 0rem 40px 0rem;
+#team{
+  padding: 7rem 0rem 40px 0rem;
 }
 
-/*--------------------------------------------------------------
-# Doctors
---------------------------------------------------------------*/
-.doctors {
-    background: #fff;
-  }
-  .doctors .member {
-    position: relative;
-    box-shadow: 0px 2px 15px rgba(44, 73, 100, 0.08);
-    padding: 30px;
-    border-radius: 10px;
-  }
-  .doctors .member .pic {
-    overflow: hidden;
-    width: 180px;
-    max-height: 180px;
-    border-radius: 50%;
-  }
-  .doctors .member .pic img {
-    transition: ease-in-out 0.3s;
-  }
-  .doctors .member:hover img {
-    transform: scale(1.1);
-  }
-  .doctors .member .member-info {
-    padding-left: 30px;
-  }
-  .doctors .member h4 {
-    font-weight: 700;
-    margin-bottom: 5px;
-    font-size: 20px;
-    color: #2c4964;
-  }
-  .doctors .member span {
-    display: block;
-    font-size: 12px;
-    padding-bottom: 10px;
-    position: relative;
-    font-weight: 500;
-  }
-  .doctors .member span::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 50px;
-    height: 1px;
-    background: #b2c8dd;
-    bottom: 0;
-    left: 0;
-  }
-  .doctors .member p {
-    margin: 10px 0 0 0;
-    font-size: 14px;
-  }
-  .doctors .member .social {
-    margin-top: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  .doctors .member .social a {
-    transition: ease-in-out 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50px;
-    width: 32px;
-    height: 32px;
-    background: #a0bcd5;
-  }
-  .doctors .member .social a i {
-    color: #fff;
-    font-size: 16px;
-    margin: 0 2px;
-  }
-  .doctors .member .social a:hover {
-    background: #1977cc;
-  }
-  .doctors .member .social a + a {
-    margin-left: 8px;
-  }
-  .vicar-list{
-      padding: 20px;
-  }
-  
+/* Team Section
+--------------------------------*/
+#team {
+  background: #fff;
+}
+#team .member {
+  text-align: center;
+  margin-bottom: 20px;
+}
+#team .member .pic {
+  margin-bottom: 15px;
+  overflow: hidden;
+  height: 260px;
+}
+#team .member .pic img {
+  object-fit: contain;
+      height: 100%;
+      width: 100%;
+}
+#team .member h4 {
+  font-weight: 700;
+  margin-bottom: 2px;
+  font-size: 18px;
+}
+#team .member span {
+  font-style: italic;
+  display: block;
+  font-size: 13px;
+}
+#team .member .social {
+  margin-top: 15px;
+}
+#team .member .social a {
+  color: #b3b3b3;
+}
+#team .member .social a:hover {
+  color: #2dc997;
+}
+#team .member .social i {
+  font-size: 18px;
+  margin: 0 2px;
+}

@@ -17,6 +17,7 @@ import { FoundersComponent } from './components/founders/founders.component';
 import { OrganisationComponent } from './components/organisation/organisation.component';
 import { OfficeComponent } from './components/office/office.component';
 import { EventsComponent } from './components/events/events.component';
+import { EventDetailsComponent } from './components/event-details/event-details.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { EventsComponent } from './components/events/events.component';
     FoundersComponent,
     OrganisationComponent,
     OfficeComponent,
-    EventsComponent
+    EventsComponent,
+    EventDetailsComponent
   ],
   imports: [
     BrowserModule,

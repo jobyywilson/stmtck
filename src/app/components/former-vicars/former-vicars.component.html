@@ -1,23 +1,21 @@
-<section id="former-vicars" class="doctors">
-    <div class="container">
 
+  <section id="team">
+    <div class="container" data-aos="fade-up">
       <div class="section-title">
         <h2>Former Vicars</h2>
       </div>
-
       <div class="row">
-
-        <div class="col-lg-6 vicar-list" *ngFor="let vicars  of formerVicars">
-          <div class="member d-flex align-items-start">
-            <div class="pic col-sm-2">
-                <img [src]="vicars.profilePic" class="img-fluid" alt="">
-            </div>
-            <div class="col-sm-6 member-info">
-              <h6>{{vicars.name}}</h6>
-              <span>{{vicars.startDate}} - {{vicars.endDate}}</span>
-              <p>{{vicars.address}}</p>
-              <p>{{vicars.phone}}</p>
-            </div>
+        <div class="col-lg-3 col-md-6" *ngFor="let vicars  of formerVicars">
+          <div class="member" data-aos="fade-up" data-aos-delay="100">
+            <div class="pic "><img [src]="vicars.profilePic" alt=""></div>
+            <h4>{{vicars.name}}</h4>
+            <span>{{vicars.startDate}} - {{vicars.endDate}}</span>
+            <!-- <div class="social">
+              <a href=""><i class="bi bi-twitter"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div> -->
           </div>
         </div>
 

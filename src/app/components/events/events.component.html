@@ -1,21 +1,91 @@
-<section id="events" class="events">
-    <div class="container" data-aos="fade-up">
+<main id="events">
 
+  <!-- ======= Blog Header ======= -->
+  <div class="header-bg page-area">
+    <div class="container position-relative">
+      <div class="section-title">
+        <h2>News and Events</h2>
+      </div>
+    </div>
+  </div><!-- End Blog Header -->
+
+  <!-- ======= Blog Page ======= -->
+  <div class="blog-page area-padding">
+    <div class="container">
       <div class="row">
-        <div class="col-md-6 d-flex align-items-stretch" *ngFor="let event  of eventList">
-          <div class="card">
-            <div class="card-img">
-              <img src="assets/img/img_1.jpg" alt="...">
+
+        <!-- End left sidebar -->
+        <!-- Start single blog -->
+        <div class="col-md-8 col-sm-8 col-xs-12">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12" *ngFor="let event  of eventList.slice(0, 5);">
+              <div class="single-blog">
+                <div class="single-blog-img">
+                  <a href="blog-details.html">
+                    <img [src]="event.featuredImage" alt="">
+                  </a>
+                </div>
+                <div class="blog-meta">
+                  <!-- <span class="comments-type">
+                    <i class="bi bi-chat"></i>
+                    <a href="#">11 comments</a>
+                  </span> -->
+                  <span class="date-type">
+                    <i class="bi bi-calendar"></i>{{event.date}}
+                  </span>
+                </div>
+                <div class="blog-text">
+                  <h4>
+                    <a href="#">{{event.title}}</a>
+                  </h4>
+                  <p>
+                    {{event.description}}
+                  </p>
+                </div>
+                <span>
+                  <a href="blog-details.html" class="ready-btn">Read more</a>
+                </span>
+              </div>
             </div>
-            <div class="card-body">
-              <h5 class="card-title"><a href="">{{event.name}}</a></h5>
-              <p class="fst-italic text-center">{{event.date}}</p>
-              <p class="card-text">{{event.description}}</p>
+            
+            <div class="blog-pagination">
+              <ul class="pagination">
+                <li class="page-item"><a href="#" class="page-link">&lt;</a></li>
+                <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                <li class="page-item"><a href="#" class="page-link">2</a></li>
+                <li class="page-item"><a href="#" class="page-link">3</a></li>
+                <li class="page-item"><a href="#" class="page-link">&gt;</a></li>
+              </ul>
             </div>
           </div>
         </div>
-       
+        <div class="col-lg-4 col-md-4">
+          <div class="page-head-blog">
+            <div class="single-blog-page">
+              <!-- recent start -->
+              <div class="left-blog">
+                <h4>recent post</h4>
+                <div class="recent-post">
+                  <!-- start single post -->
+                  <div class="recent-single-post" *ngFor="let post of postList.slice(0, 5);">
+                    <div class="post-img">
+                      <a href="#">
+                        <img src="assets/img/church_wallpper.jpeg" alt="">
+                      </a>
+                    </div>
+                    <div class="pst-content">
+                      <p><a href="#"> Redug Lerse dolor sit amet consect adipis elit.</a></p>
+                    </div>
+                  </div>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
       </div>
-
     </div>
-  </section>
+  </div>
+
+</main>
