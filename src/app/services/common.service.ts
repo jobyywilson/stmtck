@@ -61,6 +61,9 @@ export class CommonService {
       }
       else if(fileName.includes(postsPath)){
         let posts = await this.doGet(fileName.replace("src/","")).toPromise()
+
+        posts.featuredImage = 'assets/static'+posts.featuredImage;
+        posts.date = posts.publishedAt
         this.postInfo.push(posts)
         
       }
