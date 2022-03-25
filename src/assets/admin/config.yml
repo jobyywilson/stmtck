@@ -21,6 +21,7 @@ collections:
     format: 'json'
     fields:
       - { label: Title, name: title, widget: string , required: true  }
+      - { label: ID, name: id, widget: ncw-id , prefix: events , timestamp: true,required: true ,hint: This is an unique read-only id}
       - { label: Time, name: time, widget: datetime, required: true  }
       - { label: Description, name: description, widget: markdown }
       - { label: 'Image', name: featuredImage, widget: image, required: true  }
@@ -32,10 +33,11 @@ collections:
     format: 'json'
     fields:
       - { label: Title, name: title, widget: string , required: true }
+      - { label: ID, name: id, widget: ncw-id , prefix: post , timestamp: true,required: true ,hint: This is an unique read-only id}
       - { label: 'Published At', name: publishedAt, widget: date, format: 'Do MMM YYYY', required: true  }
       - { label: Content, name: description, widget: markdown , required: true }
-      - { label: 'Image', name: featuredImage, widget: image, required: true }
-      - { label: 'Gallery', name: galleryImages, widget: list, required: true ,summary: '{{fields.image}}',field: {label: Image, name: image, widget: image}}
+      - { label: 'Main Image', name: featuredImage, widget: image, required: true }
+      - { label: 'Image', name: galleryImages, widget: list, required: true ,summary: '{{fields.image}}',field: {label: Image, name: image, widget: image}}
   - name: 'obituaries'
     label: 'Obituaries'
     folder: 'src/assets/content/obituaries'
@@ -44,6 +46,7 @@ collections:
     format: 'json'
     fields:
       - { label: Name, name: name, widget: string , required: true }
+      - { label: ID, name: id, widget: ncw-id , prefix: obituaries , timestamp: true,required: true ,hint: This is an unique read-only id}
       - { label: Age, name: age, widget: number , required: true , value_type: "int", min: 1 , max: 101}
       - { label: Address, name: address, widget: markdown }
       - { label: 'Funeral At', name: funeralAt, widget: datetime , required: true }
