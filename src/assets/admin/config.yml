@@ -51,3 +51,12 @@ collections:
       - { label: Address, name: address, widget: markdown }
       - { label: 'Funeral At', name: funeralAt, widget: datetime , required: true }
       - { label: About, name: about, widget: string}
+  - name: 'officeBearers'
+    label: 'Office Bearers'
+    folder: 'src/assets/content/officeBearers'
+    create: false
+    slug: '{{slug}}'
+    format: 'json'
+    fields:
+      - { label: 'Office Bearers', name: officeBearers, widget: list, required: true ,summary: '{{fields.image}}',fields: [{ label: Name, name: name, widget: string , required: true },{ label: Postion, name: postion, widget: string , required: true},{ label: Mobile, name: mobile, widget: string , required: true},{ label: Image, name: image, widget: image , required: true}]}
+
