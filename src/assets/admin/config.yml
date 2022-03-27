@@ -34,7 +34,7 @@ collections:
     fields:
       - { label: Title, name: title, widget: string , required: true }
       - { label: ID, name: id, widget: ncw-id , prefix: post , timestamp: true,required: true ,hint: This is an unique read-only id}
-      - { label: 'Published At', name: publishedAt, widget: date, format: 'Do MMM YYYY', required: true  }
+      - { label: 'Published At', name: publishedAt, widget: date, required: true  }
       - { label: Content, name: description, widget: markdown , required: true }
       - { label: 'Main Image', name: featuredImage, widget: image, required: true }
       - { label: 'Image', name: galleryImages, widget: list, required: true ,summary: '{{fields.image}}',field: {label: Image, name: image, widget: image}}
