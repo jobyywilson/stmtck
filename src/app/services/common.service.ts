@@ -51,24 +51,19 @@ export class CommonService {
       let fileName = file.path;
       
       if(fileName.includes(eventPath)){
+
         let event = await this.doGet(fileName.replace("src/","")).toPromise()
-        let monthName = moment(event.time).format('MMMM');
-        let day = moment(event.time).format('DD');
-        let year = moment(event.time).format('YYYY');
-        event.featuredImage = 'assets/static'+event.featuredImage;
-        event.date = `${monthName} ${day}, ${year}`
-        this.eventsInfo.push(event)
+        this.eventsInfo.push(this.mapEvent(event,fileName))
       }
       else if(fileName.includes(postsPath)){
         let posts = await this.doGet(fileName.replace("src/","")).toPromise()
-
-        posts.featuredImage = 'assets/static'+posts.featuredImage;
-        posts.date = posts.publishedAt
-        this.postInfo.push(posts)
+        this.postInfo.push(this.mapPost(posts,fileName))
         
       }
       else if(fileName.includes(obituariesPath)){
         let obituary = await this.doGet(fileName.replace("src/","")).toPromise()
+        obituary.filePath = fileName
+        obituary.url = "events/obituary/"+fileName.replace("src/assets/content/obituaries/","")
         this.obituariesInfo.push(obituary)
       }
     }
@@ -86,5 +81,30 @@ export class CommonService {
     localStorage.setItem('events', JSON.stringify(this.eventsInfo));
     localStorage.setItem('obituaries', JSON.stringify(this.obituariesInfo));
   
+  }
+
+  mapEvent(eventRawData:any,fileName:any){
+  
+    let monthName = moment(eventRawData.time).format('MMMM');
+    let day = moment(eventRawData.time).format('DD');
+    let year = moment(eventRawData.time).format('YYYY');
+    eventRawData.featuredImage = 'assets/static'+eventRawData.featuredImage;
+    eventRawData.date = `${monthName} ${day}, ${year}`
+    eventRawData.filePath = fileName
+    eventRawData.url = "events/event/"+fileName.replace("src/assets/content/events/","")
+    return eventRawData
+  }
+  mapPost(postRawData:any,fileName:any){
+  
+    postRawData.featuredImage = 'assets/static'+postRawData.featuredImage;
+    postRawData.date = postRawData.publishedAt
+    postRawData.filePath = fileName
+    postRawData.url = "events/posts/"+fileName.replace("src/assets/content/posts/","");
+    let galleryImages=[]
+    for(let image of postRawData.galleryImages){
+      galleryImages.push("assets/static"+image)
+    }
+    postRawData.galleryImages=galleryImages
+    return postRawData
   }
 }

@@ -21,7 +21,7 @@
             <div class="col-md-12 col-sm-12 col-xs-5" *ngFor="let event  of postList.slice(0, 5);">
               <div class="single-blog">
                 <div class="single-blog-img">
-                  <a href="blog-details.html">
+                  <a [href]="event.url">
                     <img [src]="event.featuredImage" alt="">
                   </a>
                 </div>
@@ -36,14 +36,14 @@
                 </div>
                 <div class="blog-text">
                   <h4>
-                    <a href="#">{{event.title}}</a>
+                    <a [href]="event.url">{{event.title}}</a>
                   </h4>
                   <p>
                     {{event.description}}
                   </p>
                 </div>
                 <span>
-                  <a href="blog-details.html" class="ready-btn">Read more</a>
+                  <a [href]="event.url" class="ready-btn">Read more</a>
                 </span>
               </div>
             </div>
@@ -69,12 +69,12 @@
                   <!-- start single post -->
                   <div class="recent-single-post" *ngFor="let post of postList.slice(0, 5);">
                     <div class="post-img">
-                      <a href="#">
+                      <a [href]="post.url">
                         <img [src]="post.featuredImage" alt="">
                       </a>
                     </div>
                     <div class="pst-content">
-                      <p><a href="#">{{post.title}}</a></p>
+                      <p><a [href]="post.url">{{post.title}}</a></p>
                     </div>
                   </div>
                  

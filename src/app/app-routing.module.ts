@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { EventDetailsComponent } from './components/event-details/event-details.component';
 import { EventsComponent } from './components/events/events.component';
 import { FormerVicarsComponent } from './components/former-vicars/former-vicars.component';
 import { FoundersComponent } from './components/founders/founders.component';
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'organisation', component: OrganisationComponent },
   { path: 'office', component: OfficeComponent },
   { path: 'events', component: EventsComponent },
+  { path: 'events/:type/:id', component: EventDetailsComponent },
   
   
   {path: '**', redirectTo: '/home'}
