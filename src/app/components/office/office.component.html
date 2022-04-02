@@ -1,29 +1,31 @@
 <section id="office" class="members">
-    <div class="container">
-        <div class="row mb-5 align-items-end">
-            <div class="col-md-6" data-aos="fade-up">
-    
-              <h2>List of Kaisthanasamithy Members</h2>
-
-            </div>
-            </div>
-      <div class="row">
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch member-alin" *ngFor="let member of officeMembers">
-          <div class="member">
-            <h5>{{member.postion}}</h5>
-            <div class="member-img">
-              <img src="assets/img/blank-profile-picture.png" class="img-fluid off-mem-image" alt="">
-            </div>
-            <div class="member-info">
-              <h4>{{member.name}}</h4>
-              <p>{{member.address}}<br> Mob: {{member.mobile}}</p>
-              
-              
-            </div>
+  <div class="container">
+    <h2 >Office Bearers 2021 - 2022</h2>
+    <div class="row mb-5 align-items-end">
+      <div class="col-md-6" data-aos="fade-right">
+        <h4>Parish Officers</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div
+        class="col-lg-4 col-md-6 d-flex align-items-stretch member-alin"
+        *ngFor="let member of officeMembers" 
+      >
+        <div class="member">
+          <h5>{{ member.postion }}</h5>
+          <div class="member-img">
+            <img [src]="member.image" class="img-fluid off-mem-image" alt="" />
+          </div>
+          <div class="member-info">
+            <h4>{{ member.name }}</h4>
+            <p>
+              {{ member.address }}<br />
+              Mob: {{ member.mobile }}
+            </p>
           </div>
         </div>
-        <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+      </div>
+      <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
           <div class="member">
             <div class="member-img">
               <img src="assets/img/blank-profile-picture.png" class="img-fluid" alt="">
@@ -41,53 +43,93 @@
             </div>
           </div>
         </div> -->
-
-      </div>
-      <div class="row mb-5 align-items-end">
-        <div class="col-md-6" data-aos="fade-up">
-
-          <h2>Auditors</h2>
-
-        </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch member-alin" *ngFor="let member of auditors">
-                <div class="member">
-                  <div class="member-img">
-                    <img src="assets/img/blank-profile-picture.png" class="img-fluid off-mem-image" alt="">
-                  </div>
-                  <div class="member-info">
-                    <h4>{{member.name}}</h4>
-                    <p>{{member.address}}<br> Mob: {{member.mobile}}</p>
-                    
-                    
-                  </div>
-                </div>
-              </div>
-        </div>
-        <div class="row mb-5 align-items-end">
-            <div class="col-md-6" data-aos="fade-up">
-    
-              <h2>Sexton</h2>
-    
-            </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch member-alin" *ngFor="let member of sextons">
-                    <div class="member">
-                      <div class="member-img">
-                        <img src="assets/img/blank-profile-picture.png" class="img-fluid off-mem-image" alt="">
-                      </div>
-                      <div class="member-info">
-                        <h4>{{member.name}}</h4>
-                        <p>{{member.address}}<br> Mob: {{member.mobile}}</p>
-                        
-                        
-                      </div>
-                    </div>
-                  </div>
-            </div>
-
-
     </div>
-  </section><!-- End Members Section -->
+    
+    <div class="row mb-5 align-items-end">
+      <div class="col-md-6" data-aos="fade-right">
+        <h4>Kaisthanasamithy</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div
+        class="col-lg-4 col-md-6 d-flex align-items-stretch member-alin"
+        *ngFor="let member of kaisthanasamithy"
+      >
+        <div class="member">
+          <div class="member-img">
+            <img
+              src="assets/img/blank-profile-picture.png"
+              class="img-fluid off-mem-image"
+              alt=""
+            />
+          </div>
+          <div class="member-info">
+            <h4>{{ member.name }}</h4>
+            <p>
+              {{ member.address }}<br />
+              Mob: {{ member.mobile }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-5 align-items-end">
+      <div class="col-md-6" data-aos="fade-right">
+        <h4>Auditors</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div
+        class="col-lg-4 col-md-6 d-flex align-items-stretch member-alin"
+        *ngFor="let member of auditors"
+      >
+        <div class="member">
+          <div class="member-img">
+            <img
+              src="assets/img/blank-profile-picture.png"
+              class="img-fluid off-mem-image"
+              alt=""
+            />
+          </div>
+          <div class="member-info">
+            <h4>{{ member.name }}</h4>
+            <p>
+              {{ member.address }}<br />
+              Mob: {{ member.mobile }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-5 align-items-end">
+      <div class="col-md-6" data-aos="fade-right">
+        <h4>Sexton</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div
+        class="col-lg-4 col-md-6 d-flex align-items-stretch member-alin"
+        *ngFor="let member of sextons"
+      >
+        <div class="member">
+          <div class="member-img">
+            <img
+              src="assets/img/blank-profile-picture.png"
+              class="img-fluid off-mem-image"
+              alt=""
+            />
+          </div>
+          <div class="member-info">
+            <h4>{{ member.name }}</h4>
+            <p>
+              {{ member.address }}<br />
+              Mob: {{ member.mobile }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Members Section -->

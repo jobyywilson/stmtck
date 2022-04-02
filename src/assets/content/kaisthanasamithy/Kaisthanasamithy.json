@@ -2,6 +2,138 @@
 {
     "title": "Kaisthanasamithy 2021 -2022",
     "members":[
-        
+        {
+            "name": "Mrs Ani Eapen",
+            "address": "Padijarekiruvaliyil",
+            "mobile": "8606603147",
+            "postion":"Padinjarebhagam prathanyogham",
+            "image":"/images/uploads/blank-profile-picture.png"
+        },
+        {
+            "name": "Mrs Annama Alexander",
+            "address": "Thanthumaliyil",
+            "mobile": "9048655456",
+            "postion":"Padinjarebhagam prathanyogham",
+            "image":"/images/uploads/blank-profile-picture.png"
+        },
+        {
+            "name": "Mr Mathews Varghese",
+            "address": "Thuruthiyil",
+            "mobile": "9745322949",
+            "postion":"Pallibhagham A prathanyogham",
+            "image":"/images/uploads/blank-profile-picture.png"
+        },
+        {
+            "name": "Mr Arpith Biju Mathew",
+            "address": "Thanath",
+            "mobile": "9497755750",
+            "postion":"Pallibhagham B prathanyogham",
+            "image":"/images/uploads/blank-profile-picture.png"
+        },
+        {
+            "name": "Mr T V Alexander",
+            "address": "Thanath",
+            "mobile": "9539615442",
+            "postion":"Madhyabhagam prathanyogham",
+            "image":"/images/uploads/blank-profile-picture.png"
+        },
+        {
+            "name": "Mr Alexander Mathew",
+            "address": "Thanath Kochuprambil",
+            "mobile": "8547368376",
+            "postion":"Madhyabhagam prathanyogham",
+            "image":"/images/uploads/blank-profile-picture.png"
+        },
+        {
+            "name": "Mr Mathew Kuruvilla",
+            "address": "Thanathmalayil",
+            "mobile": "9048655289",
+            "postion":"Paruthanamkuzhil prathanyogham",
+            "image":"/images/uploads/blank-profile-picture.png"
+        },
+        {
+            "name": "Mr Jacob Mathew",
+            "address": "Kannamalla cottage",
+            "mobile": "9400085903",
+            "postion":"Kannamalla prathanyogham",
+            "image":"/images/uploads/blank-profile-picture.png"
+        },
+        {
+            "name": "Mrs Shoba Gigi",
+            "address": "Keruvalli parayil",
+            "mobile": "9496147162",
+            "postion":"St Thomas Sunday School Kallooppara",
+            "image":"/images/uploads/blank-profile-picture.png"
+        },
+        {
+            "name": "Mrs Ani Varghese",
+            "address": "Kannamalla cottage",
+            "mobile": "9446190552",
+            "postion":"St Thomas Sunday School Puthussery",
+            "image":"/images/uploads/blank-profile-picture.png"
+        },
+        {
+            "name": "Mr Roney Robert",
+            "address": "Kodalivilayil",
+            "mobile": "7560875937",
+            "postion":"Edavakamission",
+            "image":"/images/uploads/blank-profile-picture.png"
+        },
+        {
+            "name": "Mr Elbin Varghese Kurien",
+            "address": "Joyi Villa",
+            "mobile": "9744033070",
+            "postion":"Yuvajanasakhyam",
+            "image":"/images/uploads/blank-profile-picture.png"
+        },
+        {
+            "name": "Mr Reji Mathew",
+            "address": "Thanathu Puthenpurayil",
+            "mobile": "9447563243",
+            "postion":"Church choir",
+            "image":"/images/uploads/blank-profile-picture.png"
+        },
+        {
+            "name": "Mrs Rachel Ommen",
+            "address": "Pandikashaliyil",
+            "mobile": "8289875837",
+            "postion":"Sevikasangom",
+            "image":"/images/uploads/blank-profile-picture.png"
+        },
+        {
+            "name": "Mr A K George",
+            "address": "Azhakanal Malayil",
+            "mobile": "9446474514",
+            "postion":"Vikasana Samithy",
+            "image":"/images/uploads/blank-profile-picture.png"
+        },
+        {
+            "name": "Mr Suju Mathew",
+            "address": "Suju Home",
+            "mobile": "8129101060",
+            "postion":"Mandalam Predhinidhi",
+            "image":"/images/uploads/blank-profile-picture.png"
+        },
+        {
+            "name": "Rev P E Mathew",
+            "address": "-",
+            "mobile": "9496872260",
+            "postion":"Bhadrasanam assembly member",
+            "image":"/images/uploads/blank-profile-picture.png"
+        },
+        {
+            "name": "Mr M C Ninan",
+            "address": "Mammoottil",
+            "mobile": "9446186172",
+            "postion":"Bhadrasanam assembly member",
+            "image":"/images/uploads/blank-profile-picture.png"
+        },
+        {
+            "name": "Mrs Ani Jacob",
+            "address": "Neithallor Garce cottage",
+            "mobile": "940006186172",
+            "postion":"Bhadrasanam assembly member",
+            "image":"/images/uploads/blank-profile-picture.png"
+        }
     ]
 }

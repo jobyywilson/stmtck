@@ -71,10 +71,10 @@ export class CommonService {
       return (moment(left.time).diff(moment(right.time)))
     });
     this.postInfo = this.postInfo.sort(function (left :any, right: any) {
-      return -(moment(left.publishedAt).diff(moment(right.publishedAt)))
+      return (moment(left.publishedAt).diff(moment(right.publishedAt)))
     });
     this.obituariesInfo = this.obituariesInfo.sort(function (left :any, right: any) {
-      return -(moment(left.funeralAt).diff(moment(right.funeralAt)))
+      return (moment(left.funeralAt).diff(moment(right.funeralAt)))
     });
 
     localStorage.setItem('posts', JSON.stringify(this.postInfo));
@@ -83,13 +83,16 @@ export class CommonService {
   
   }
 
+  mapDate(rawDate:any){
+    let monthName = moment(rawDate.time).format('MMMM');
+    let day = moment(rawDate.time).format('DD');
+    let year = moment(rawDate.time).format('YYYY');
+    return `${monthName} ${day}, ${year}`
+  }
+
   mapEvent(eventRawData:any,fileName:any){
-  
-    let monthName = moment(eventRawData.time).format('MMMM');
-    let day = moment(eventRawData.time).format('DD');
-    let year = moment(eventRawData.time).format('YYYY');
     eventRawData.featuredImage = 'assets/static'+eventRawData.featuredImage;
-    eventRawData.date = `${monthName} ${day}, ${year}`
+    eventRawData.date = this.mapDate(eventRawData.time)
     eventRawData.filePath = fileName
     eventRawData.url = "events/event/"+fileName.replace("src/assets/content/events/","")
     return eventRawData
@@ -97,7 +100,7 @@ export class CommonService {
   mapPost(postRawData:any,fileName:any){
   
     postRawData.featuredImage = 'assets/static'+postRawData.featuredImage;
-    postRawData.date = postRawData.publishedAt
+    postRawData.date = this.mapDate(postRawData.publishedAt)
     postRawData.filePath = fileName
     postRawData.url = "events/posts/"+fileName.replace("src/assets/content/posts/","");
     let galleryImages=[]
@@ -106,5 +109,11 @@ export class CommonService {
     }
     postRawData.galleryImages=galleryImages
     return postRawData
+  }
+
+  mapOfficers(officeRawData:any){
+    let rawData = officeRawData["members"]
+    rawData.map((obj:any)=> obj.image = "assets/static"+obj.image)
+    return rawData;
   }
 }

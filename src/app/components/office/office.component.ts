@@ -11,6 +11,7 @@ export class OfficeComponent implements OnInit {
   officeMembers : any = [];
   auditors : any = [];
   sextons : any = [];
+  kaisthanasamithy: any = [];
   constructor(private commonService : CommonService) { }
 
   ngOnInit(): void {
@@ -18,14 +19,20 @@ export class OfficeComponent implements OnInit {
     if(header){
       header.style.backgroundColor = '#0291d9';
     }
-    this.commonService.doGet("assets/office.json").subscribe((data:any) =>{
-      this.officeMembers = data;
+    this.commonService.doGet("assets/content/officeBearers/Office Bearers.json").subscribe((data:any) =>{
+      this.officeMembers = this.commonService.mapOfficers(data);
     });
-    this.commonService.doGet("assets/sexton.json").subscribe((data:any) =>{
-      this.sextons = data;
+    this.commonService.doGet("assets/content/sexton/Sexton.json").subscribe((data:any) =>{
+      this.sextons = this.commonService.mapOfficers(data);
     });
-    this.commonService.doGet("assets/auditors.json").subscribe((data:any) =>{
-      this.auditors = data;
+    this.commonService.doGet("assets/content/auditors/Auditors.json").subscribe((data:any) =>{
+      this.auditors = this.commonService.mapOfficers(data);
     });
+
+    this.commonService.doGet("assets/content/kaisthanasamithy/Kaisthanasamithy.json").subscribe((data:any) =>{
+      this.kaisthanasamithy = this.commonService.mapOfficers(data);
+    });
+
+    
   }
 }

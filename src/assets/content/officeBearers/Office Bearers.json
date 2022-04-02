@@ -1,6 +1,55 @@
 {
     "title": "Office Bearers 2021 -2022",
     "members":[
-        
+        {
+            "name": "Rev Roy Geevarghese",
+            "address": "Parsonage",
+            "postion": "President",
+            "mobile": "9496377729",
+            "image":"/images/uploads/blank-profile-picture.png"
+        },
+        {
+            "name": "Mr George Thomas",
+            "address": "Nethilloor mannil",
+            "postion": "Vice President",
+            "mobile": "9447114473",
+            "image":"/images/uploads/blank-profile-picture.png"
+        },
+        {
+            "name": "Mr Johnson Jacob",
+            "address": "Thurutipallil Anand Villa",
+            "postion": "Trustee",
+            "mobile": "9495053082",
+            "image":"/images/uploads/blank-profile-picture.png"
+        },
+        {
+            "name": "Mr Rohit Reji Mathew",
+            "address": "Thanathu Puthenpuril",
+            "postion": "Trustee",
+            "mobile": "8111896579",
+            "image":"/images/uploads/blank-profile-picture.png"
+        },
+        {
+            "name": "Mr P E Eapen",
+            "address": "Pandikashaleil",
+            "postion": "Secretary",
+            "mobile": "9496147223",
+            "image":"/images/uploads/blank-profile-picture.png"
+        },
+    
+        {
+            "name": "Mr M C Alexander",
+            "address": "Mammoottil",
+            "postion": "Lay Ministrant",
+            "mobile": "9495068327",
+            "image":"/images/uploads/blank-profile-picture.png"
+        },
+        {
+            "name": "Mr.Roy Koshy",
+            "address": "Azhakanal",
+            "postion": "Lay Ministrant",
+            "mobile": "9495068327",
+            "image":"/images/uploads/blank-profile-picture.png"
+        }
     ]
 }
