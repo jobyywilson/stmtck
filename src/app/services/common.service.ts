@@ -84,9 +84,9 @@ export class CommonService {
   }
 
   mapDate(rawDate:any){
-    let monthName = moment(rawDate.time).format('MMMM');
-    let day = moment(rawDate.time).format('DD');
-    let year = moment(rawDate.time).format('YYYY');
+    let monthName = moment(rawDate).format('MMMM');
+    let day = moment(rawDate).format('DD');
+    let year = moment(rawDate).format('YYYY');
     return `${monthName} ${day}, ${year}`
   }
 
