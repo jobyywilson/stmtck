@@ -30,7 +30,6 @@ export class EventsComponent implements OnInit {
             this.commonService.mapPostedInfo(data[0]);
             this.eventList = this.commonService.eventsInfo;
             this.postList = this.commonService.postInfo;
-            console.log(this.eventList)
           },
         (err:any) => console.error(err)
         );

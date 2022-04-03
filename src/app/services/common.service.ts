@@ -67,18 +67,17 @@ export class CommonService {
         this.obituariesInfo.push(obituary)
       }
     }
-    this.eventsInfo = this.eventsInfo.sort(function (left :any, right: any) {
-      return (moment(left.time).diff(moment(right.time)))
-    });
+    this.postInfo.push(...this.eventsInfo);
     this.postInfo = this.postInfo.sort(function (left :any, right: any) {
-      return (moment(left.publishedAt).diff(moment(right.publishedAt)))
+      let leftTime = left.time ? left.time:left.publishedAt;
+      let rightTime = right.time ? right.time:right.publishedAt;
+      return -(moment(leftTime).diff(moment(rightTime)))
     });
     this.obituariesInfo = this.obituariesInfo.sort(function (left :any, right: any) {
       return (moment(left.funeralAt).diff(moment(right.funeralAt)))
     });
 
     localStorage.setItem('posts', JSON.stringify(this.postInfo));
-    localStorage.setItem('events', JSON.stringify(this.eventsInfo));
     localStorage.setItem('obituaries', JSON.stringify(this.obituariesInfo));
   
   }
@@ -94,7 +93,8 @@ export class CommonService {
     eventRawData.featuredImage = 'assets/static'+eventRawData.featuredImage;
     eventRawData.date = this.mapDate(eventRawData.time)
     eventRawData.filePath = fileName
-    eventRawData.url = "events/event/"+fileName.replace("src/assets/content/events/","")
+    eventRawData.url = "events/event/"+fileName.replace("src/assets/content/events/","");
+    eventRawData.galleryImages=[]
     return eventRawData
   }
   mapPost(postRawData:any,fileName:any){

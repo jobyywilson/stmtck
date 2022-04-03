@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { combineLatest } from 'rxjs';
 import { CommonService } from 'src/app/services/common.service';
 
 @Component({
@@ -14,6 +15,7 @@ export class EventDetailsComponent implements OnInit {
   type : any = "";
   id : any = "";
   data : any = {};
+  postList : any =[];
   ngOnInit(): void {
     let header = document.getElementById('header');
     if(header){
@@ -22,7 +24,9 @@ export class EventDetailsComponent implements OnInit {
     let paramMap = this.route.snapshot.paramMap;
     this.type = paramMap.get("type");
     this.id = paramMap.get("id");
+    this.loadPostInfo();
     this.loadData();
+    
   }
 
   async loadData(){
@@ -30,5 +34,16 @@ export class EventDetailsComponent implements OnInit {
     let rawData = await this.commonService.doGet("assets/content/"+this.type+"/"+this.id).toPromise();
     this.data = this.commonService.mapPost(rawData,fileName)
   }
+
+  loadPostInfo(){
+    let combinedData = [this.commonService.getPostedInfo()]
+        combineLatest(combinedData).subscribe(
+          data => {
+            this.commonService.mapPostedInfo(data[0]);
+            this.postList = this.commonService.postInfo;
+          },
+        (err:any) => console.error(err)
+        );
+    }
 
 }

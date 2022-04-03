@@ -16,9 +16,9 @@
 
         <!-- End left sidebar -->
         <!-- Start single blog -->
-        <div class="col-md-8 col-sm-8 col-xs-12">
+ 
           <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-5" *ngFor="let event  of postList.slice(0, 5);">
+            <div class="col-md-4 col-sm-4 col-xs-4" *ngFor="let event  of postList.slice(0, 5);">
               <div class="single-blog">
                 <div class="single-blog-img">
                   <a [href]="event.url">
@@ -58,31 +58,8 @@
               </ul>
             </div> -->
           </div>
-        </div>
-        <div class="col-lg-4 col-md-4">
-          <div class="page-head-blog">
-            <div class="single-blog-page">
-              <!-- recent start -->
-              <div class="left-blog">
-                <h4>recent post</h4>
-                <div class="recent-post">
-                  <!-- start single post -->
-                  <div class="recent-single-post" *ngFor="let post of postList.slice(0, 5);">
-                    <div class="post-img">
-                      <a [href]="post.url">
-                        <img [src]="post.featuredImage" alt="">
-                      </a>
-                    </div>
-                    <div class="pst-content">
-                      <p><a [href]="post.url">{{post.title}}</a></p>
-                    </div>
-                  </div>
-                 
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    
+       
         
       </div>
     </div>

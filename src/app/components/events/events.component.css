@@ -119,7 +119,9 @@
 .page-area {
   position: relative;
 }
-
+.blog-page {
+  padding-top: 40px;
+}
 .blog-page .banner-box {
   margin-bottom: 40px;
 }
