@@ -12,48 +12,44 @@ public_folder: '/images/uploads'
 
 # Collections https://www.netlifycms.org/docs/configuration-options/#collections
 collections:
-  - name: 'newsAndEvents'
-    label: 'News and Events'
-    files:
-    - name: 'events'
-      label: 'Events'
-      folder: 'src/assets/content/events'
-      create: true
-      slug: '{{slug}}'
-      widget: list
-      format: 'json'
-      fields:
-        - { label: Title, name: title, widget: string , required: true  }
-        - { label: Time, name: time, widget: datetime, required: true  }
-        - { label: Description, name: description, widget: markdown }
-        - { label: 'Image', name: featuredImage, widget: image, required: true  }
-    - name: 'posts'
-      label: 'Posts'
-      folder: 'src/assets/content/posts'
-      create: true
-      slug: '{{slug}}'
-      format: 'json'
-      fields:
-        - { label: Title, name: title, widget: string , required: true }
-        - { label: 'Published At', name: publishedAt, widget: date, required: true  }
-        - { label: Content, name: description, widget: markdown , required: true }
-        - { label: 'Main Image', name: featuredImage, widget: image, required: true }
-        - { label: 'Image', name: galleryImages, widget: list, required: true ,summary: '{{fields.image}}',field: {label: Image, name: image, widget: image}}
-    - name: 'obituaries'
-      label: 'Obituaries'
-      folder: 'src/assets/content/obituaries'
-      create: true
-      slug: '{{slug}}'
-      format: 'json'
-      fields:
-        - { label: Name, name: name, widget: string , required: true }
-        - { label: Age, name: age, widget: number , required: true , value_type: "int", min: 1 , max: 101}
-        - { label: Address, name: address, widget: markdown }
-        - { label: 'Funeral At', name: funeralAt, widget: datetime , required: true }
-        - { label: About, name: about, widget: string}
+  - name: 'events'
+    label: 'Events'
+    folder: 'src/assets/content/events'
+    create: true
+    slug: '{{slug}}'
+    widget: list
+    format: 'json'
+    fields:
+      - { label: Title, name: title, widget: string , required: true  }
+      - { label: Time, name: time, widget: datetime, required: true  }
+      - { label: Description, name: description, widget: markdown }
+      - { label: 'Image', name: featuredImage, widget: image, required: true  }
+  - name: 'posts'
+    label: 'Posts'
+    folder: 'src/assets/content/posts'
+    create: true
+    slug: '{{slug}}'
+    format: 'json'
+    fields:
+      - { label: Title, name: title, widget: string , required: true }
+      - { label: 'Published At', name: publishedAt, widget: date, required: true  }
+      - { label: Content, name: description, widget: markdown , required: true }
+      - { label: 'Main Image', name: featuredImage, widget: image, required: true }
+      - { label: 'Image', name: galleryImages, widget: list, required: true ,summary: '{{fields.image}}',field: {label: Image, name: image, widget: image}}
+  - name: 'obituaries'
+    label: 'Obituaries'
+    folder: 'src/assets/content/obituaries'
+    create: true
+    slug: '{{slug}}'
+    format: 'json'
+    fields:
+      - { label: Name, name: name, widget: string , required: true }
+      - { label: Age, name: age, widget: number , required: true , value_type: "int", min: 1 , max: 101}
+      - { label: Address, name: address, widget: markdown }
+      - { label: 'Funeral At', name: funeralAt, widget: datetime , required: true }
+      - { label: About, name: about, widget: string}
   - name: 'officeBearers'
-    label: 'Office Bearers'
-    
+    label: 'Parish Officers'
     folder: 'src/assets/content/officeBearers'
     create: false
     slug: '{{slug}}'
