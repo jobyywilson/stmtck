@@ -310,5 +310,15 @@
         "phone": "",
         "emailAddress": "",
         "endDate": "2019 April"
+    },
+    {
+        "slNo": 32,
+        "name": "Rev Roy Geevarghese",
+        "address": "",
+        "startDate": "2019 May",
+        "profilePic": "assets/img/former-vicars/row_gheevarghese.jpg",
+        "phone": "",
+        "emailAddress": "",
+        "endDate": "2022 April"
     }
 ]
