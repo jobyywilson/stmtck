@@ -38,7 +38,7 @@
                               </div>
                             </div>
                     
-                            <div class="row awesome-project-content portfolio-container">
+                            <div *ngIf="data.galleryImages" class="row awesome-project-content portfolio-container">
                     
                               <!-- portfolio-item start -->
                               <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-app portfolio-item" *ngFor="let imageInfo  of data.galleryImages">
