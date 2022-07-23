@@ -1,6 +1,21 @@
 <section id="office" class="members">
   <div class="container">
-    <h2 >Office Bearers 2021 - 2022</h2>
+    <h2 >Office Bearers </h2>
+    <div class="col-sm-4 col-md-4 year-selection" data-aos="fade-right">
+      <div class="row">
+        <div class="col-sm-2 col-md-4 year">
+          <h6>Year : </h6>
+        </div>
+        <div class="col-sm-5 col-md-8">
+          <select (change)="onYearchange($event.target)" class="form-select" aria-label="Default select example">
+            <option *ngFor="let year of years">{{year}}</option>
+          </select>
+        </div>
+        
+      </div>
+
+    </div>
+
     <div class="row mb-5 align-items-end">
       <div class="col-md-6" data-aos="fade-right">
         <h4>Parish Officers</h4>
@@ -9,7 +24,7 @@
     <div class="row">
       <div
         class="col-lg-4 col-md-6 d-flex align-items-stretch member-alin"
-        *ngFor="let member of officeMembers" 
+        *ngFor="let member of selectedOffice.officeMembers" 
       >
         <div class="member">
           <h5>{{ member.postion }}</h5>
@@ -25,26 +40,7 @@
           </div>
         </div>
       </div>
-      <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-          <div class="member">
-            <div class="member-img">
-              <img src="assets/img/blank-profile-picture.png" class="img-fluid" alt="">
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="member-info">
-              <h4>Niall Katz</h4>
-              <span>Marketing</span>
-              <p>Aut ex esse explicabo quia harum ea accusamus excepturi. Temporibus at quia quisquam veritatis impedit. Porro laborum voluptatum sed necessitatibus a saepe. Deserunt laborum quasi consequatur voluptatum iusto sint qui fuga vel. Enim eveniet sed quibusdam rerum in. Non dicta architecto consequatur quo praesentium nesciunt.</p>
-            </div>
-          </div>
-        </div> -->
-    </div>
-    
+<!--     
     <div class="row mb-5 align-items-end">
       <div class="col-md-6" data-aos="fade-right">
         <h4>Kaisthanasamithy</h4>
@@ -53,7 +49,7 @@
     <div class="row">
       <div
         class="col-lg-4 col-md-6 d-flex align-items-stretch member-alin"
-        *ngFor="let member of kaisthanasamithy"
+        *ngFor="let member of selectedOffice.kaisthanasamithy"
       >
         <div class="member">
           <div class="member-img">
@@ -81,7 +77,7 @@
     <div class="row">
       <div
         class="col-lg-4 col-md-6 d-flex align-items-stretch member-alin"
-        *ngFor="let member of auditors"
+        *ngFor="let member of selectedOffice.auditors"
       >
         <div class="member">
           <div class="member-img">
@@ -110,7 +106,7 @@
     <div class="row">
       <div
         class="col-lg-4 col-md-6 d-flex align-items-stretch member-alin"
-        *ngFor="let member of sextons"
+        *ngFor="let member of selectedOffice.sextons"
       >
         <div class="member">
           <div class="member-img">
@@ -128,8 +124,9 @@
             </p>
           </div>
         </div>
-      </div>
+      </div>-->
     </div>
+     
   </div>
 </section>
 <!-- End Members Section -->

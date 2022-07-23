@@ -6,3 +6,11 @@
 .off-mem-image{
     max-width: 200px;
 }
+.year{
+    align-items: center;
+    display: flex;
+}
+.year-selection{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
