@@ -4,7 +4,9 @@
     margin: 7rem 0rem 3rem 0rem;
 }
 .off-mem-image{
-    max-width: 200px;
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
 }
 .year{
     align-items: center;
@@ -13,4 +15,7 @@
 .year-selection{
     padding-top: 30px;
     padding-bottom: 30px;
+}
+.members .member .member-img {
+    height: 200px;
 }

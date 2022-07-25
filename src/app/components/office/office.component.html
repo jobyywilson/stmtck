@@ -33,9 +33,12 @@
           </div>
           <div class="member-info">
             <h4>{{ member.name }}</h4>
-            <p>
+            <p  *ngIf="member.mobile">
               {{ member.address }}<br />
               Mob: {{ member.mobile }}
+            </p>
+            <p *ngIf="!member.mobile">
+              {{ member.address }}<br />
             </p>
           </div>
         </div>
