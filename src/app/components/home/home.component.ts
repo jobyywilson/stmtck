@@ -16,19 +16,18 @@ export class HomeComponent implements OnInit {
 
   eventList : any = [];
   postList : any = [];
+  obituaryList : any = [];
 
   ngOnInit(): void {
     this.loadData();
   }
 
   loadData(){
-    let combinedData = [this.commonService.getPostedInfo()]
-        combineLatest(combinedData).subscribe(
-          data => {
-            this.commonService.mapPostedInfo(data[0]);
-            this.eventList = this.commonService.eventsInfo;
-            this.postList = this.commonService.postInfo;
-            console.log(this.eventList)
+    this.commonService.getPostedInfo().subscribe(
+          async (data:any) => {
+            let events = await this.commonService.mapPostedInfo(data)
+            this.postList = events["posts"];
+            this.obituaryList = events["obituaries"];
           },
         (err:any) => console.error(err)
         );

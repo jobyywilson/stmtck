@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import * as moment from 'moment';
-import { combineLatest } from 'rxjs';
+import { combineLatest, Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -13,6 +13,7 @@ export class CommonService {
   obituariesInfo : any = [];
 
   constructor(private http: HttpClient) { }
+
 
   getPostedInfo(){
     return this.doGet(this.configUrl);
@@ -62,9 +63,7 @@ export class CommonService {
       }
       else if(fileName.includes(obituariesPath)){
         let obituary = await this.doGet(fileName.replace("src/","")).toPromise()
-        obituary.filePath = fileName
-        obituary.url = "events/obituary/"+fileName.replace("src/assets/content/obituaries/","")
-        this.obituariesInfo.push(obituary)
+        this.obituariesInfo.push(this.mapObituaries(obituary,fileName))
       }
     }
     this.postInfo.push(...this.eventsInfo);
@@ -74,12 +73,12 @@ export class CommonService {
       return -(moment(leftTime).diff(moment(rightTime)))
     });
     this.obituariesInfo = this.obituariesInfo.sort(function (left :any, right: any) {
-      return (moment(left.funeralAt).diff(moment(right.funeralAt)))
+      return (moment(right.funeralAt).diff(moment(left.funeralAt)))
     });
 
     localStorage.setItem('posts', JSON.stringify(this.postInfo));
     localStorage.setItem('obituaries', JSON.stringify(this.obituariesInfo));
-  
+    return {"posts":this.postInfo,"obituaries":this.obituariesInfo}
   }
 
   mapDate(rawDate:any){
@@ -87,6 +86,15 @@ export class CommonService {
     let day = moment(rawDate).format('DD');
     let year = moment(rawDate).format('YYYY');
     return `${monthName} ${day}, ${year}`
+  }
+
+  mapObituaries(obituaryRawData:any,fileName:any){
+    obituaryRawData.featuredImage = 'assets/static'+obituaryRawData.featuredImage;
+    obituaryRawData.funeralAt = this.mapDate(obituaryRawData.funeralAt)
+    obituaryRawData.filePath = fileName
+    obituaryRawData.url = "events/obituaries/"+fileName.replace("src/assets/content/obituaries/","");
+    obituaryRawData.galleryImages=[]
+    return obituaryRawData
   }
 
   mapEvent(eventRawData:any,fileName:any){
@@ -97,6 +105,8 @@ export class CommonService {
     eventRawData.galleryImages=[]
     return eventRawData
   }
+
+
   mapPost(postRawData:any,fileName:any){
   
     postRawData.featuredImage = 'assets/static'+postRawData.featuredImage;
@@ -109,6 +119,7 @@ export class CommonService {
         galleryImages.push("assets/static"+image)
       }
     }
+
     postRawData.galleryImages=galleryImages
     return postRawData
   }
@@ -117,5 +128,9 @@ export class CommonService {
     let rawData = officeRawData["members"]
     rawData.map((obj:any)=> obj.image = "assets/static"+obj.image)
     return rawData;
+  }
+
+  public readFile(path :string): Observable<any> {
+    return this.http.get(path);
   }
 }

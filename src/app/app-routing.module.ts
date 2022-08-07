@@ -24,7 +24,8 @@ const routes: Routes = [
   { path: 'founders', component: FoundersComponent },
   { path: 'organisation', component: OrganisationComponent },
   { path: 'office', component: OfficeComponent },
-  { path: 'events', component: EventsComponent },
+  { path: 'events/:type', component: EventsComponent },
+  
   { path: 'events/:type/:id', component: EventDetailsComponent },
   
   
