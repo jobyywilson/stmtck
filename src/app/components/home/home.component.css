@@ -93,7 +93,7 @@
 }
 
 #blog .block-blog .content-blog a.readmore {
-  color: #505050;
+  color: #505050 ;
   font-size: 12px;
   font-weight: 600;
   text-decoration: none;
@@ -109,4 +109,38 @@
 }
 .block-blog{
   box-shadow: 0 0 0 0 rgb(0 0 0 / 20%), 0 0 4px 0 rgb(0 0 0 / 19%);
+}
+
+@media (min-width: 992px) {
+  .align-to-center{
+      display: flex; 
+      justify-content: end;
+      align-items: right;
+  }
+}
+@media (max-width: 992px) {
+  .align-to-center{
+      display: flex; 
+      justify-content: center;
+      align-items: center;
+  }
+}
+.event-detail{
+  align-items: center;
+  justify-content: center;
+}
+.obituariesList{
+  max-width: 250px;
+}
+.event-heading{
+  font: 30px "Raleway", sans-serif;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+.section{
+  padding: 30px 0;;
+}
+.obituaries-name{
+  color: #444;
+  text-decoration: none;
 }

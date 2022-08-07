@@ -533,3 +533,9 @@ width: 100%;
 .event{
 min-width: 300px;
 }
+#title {
+  color: #777 !important;
+  text-decoration: none !important;
+  transition: 0.3s all ease;
+  font-size: 16px;
+}
