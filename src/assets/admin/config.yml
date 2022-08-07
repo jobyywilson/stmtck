@@ -50,7 +50,6 @@ collections:
       - { label: 'Died on', name: diedOn, widget: datetime , required: true }
       - { label: Description, name: description, widget: markdown, required: true}
       - { label: 'Photo', name: featuredImage, widget: image, required: true }
-      - { label: 'Member code', name: code, widget: string, required: true }
   - name: 'officeBearers'
     label: 'Parish Officers'
     folder: 'src/assets/content/officeBearers'
