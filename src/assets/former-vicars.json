@@ -329,16 +329,16 @@
         "profilePic": "assets/img/vicar/jacob-varghese.jpeg",
         "phone": "",
         "emailAddress": "",
-        "endDate": "2025 April"
+        "endDate": ""
     },
     {
         "slNo": 34,
         "name": "Rev Sabu Thomas",
         "address": "",
-        "startDate": "2025 May",
+        "startDate": "",
         "profilePic": "assets/img/former-vicars/sabu_thomas.png",
         "phone": "",
         "emailAddress": "",
-        "endDate": ""
+        "endDate": "2025 May"
     }
 ]
