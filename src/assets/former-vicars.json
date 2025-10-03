@@ -320,5 +320,25 @@
         "phone": "",
         "emailAddress": "",
         "endDate": "2022 April"
+    },
+    {
+        "slNo": 33,
+        "name": "Rev. Jacob Varghese",
+        "address": "",
+        "startDate": "2022 May",
+        "profilePic": "assets/img/vicar/jacob-varghese.jpeg",
+        "phone": "",
+        "emailAddress": "",
+        "endDate": "2025 April"
+    },
+    {
+        "slNo": 34,
+        "name": "Rev Sabu Thomas",
+        "address": "",
+        "startDate": "2025 May",
+        "profilePic": "assets/img/former-vicars/row_gheevarghese.jpg",
+        "phone": "",
+        "emailAddress": "",
+        "endDate": "-"
     }
 ]
