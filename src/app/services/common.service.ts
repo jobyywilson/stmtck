@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import * as moment from 'moment';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -12,6 +12,8 @@ export class CommonService {
   eventsInfo : any = [];
   obituariesInfo : any = [];
   private contentPromise?: Promise<{posts: any[], obituaries: any[]}>;
+  private loadingSubject = new BehaviorSubject<boolean>(true);
+  readonly loading$ = this.loadingSubject.asObservable();
 
   constructor(private http: HttpClient) { }
 
@@ -22,10 +24,16 @@ export class CommonService {
 
   getContent(): Promise<{posts: any[], obituaries: any[]}> {
     if (!this.contentPromise) {
+      this.loadingSubject.next(true);
       this.contentPromise = this.getPostedInfo().toPromise()
         .then((data: any) => this.mapPostedInfo(data))
+        .then((content) => {
+          this.loadingSubject.next(false);
+          return content;
+        })
         .catch((error: any) => {
           this.contentPromise = undefined;
+          this.loadingSubject.next(false);
           throw error;
         });
     }

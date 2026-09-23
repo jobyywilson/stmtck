@@ -1,3 +1,10 @@
+<div class="app-loading" *ngIf="loading$ | async" role="status" aria-live="polite" aria-label="Loading">
+  <div class="loading-mark">
+    <span></span><span></span><span></span>
+  </div>
+  <p>Loading parish content</p>
+</div>
+
 <app-header></app-header>
 
 <router-outlet></router-outlet>
