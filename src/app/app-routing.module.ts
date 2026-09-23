@@ -34,7 +34,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    // Every routed view should start at the top rather than inheriting the
+    // scroll position from the page the visitor just left.
+    scrollPositionRestoration: 'top',
+    anchorScrolling: 'enabled'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
