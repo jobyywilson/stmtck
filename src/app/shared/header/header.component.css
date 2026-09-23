@@ -203,7 +203,11 @@
   }
   .navbar-mobile a:hover,
   .navbar-mobile a.active,
-  .navbar-mobile .nav-dropdown-trigger:hover { background: #edf2ee; color: #173b31; }
+  .navbar-mobile .nav-dropdown-trigger:hover,
+  .navbar-mobile li:hover > .nav-dropdown-trigger {
+    background: #edf2ee;
+    color: #173b31;
+  }
   .navbar-mobile a.contact-link {
     margin: 8px 0 0;
     border: 0;
