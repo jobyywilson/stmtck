@@ -33,25 +33,17 @@ export class EventDetailsComponent implements OnInit {
   }
 
   async loadData(){
-    let fileName = "src/assets/content/posts/"+this.type;
+    let fileName = "src/assets/content/"+this.type+"/"+this.id;
     let rawData = await this.commonService.doGet("assets/content/"+this.type+"/"+this.id).toPromise();
-    this.data = this.commonService.mapPost(rawData,fileName)
+    this.data = this.type === "obituaries"
+      ? this.commonService.mapObituaries(rawData,fileName)
+      : this.commonService.mapPost(rawData,fileName)
   }
 
   loadPostInfo(){
-    this.commonService.getPostedInfo().subscribe(
-          async data => {
-            let events = await this.commonService.mapPostedInfo(data);
-            let type  = this.type.toString()
-            if(type === "posts"){
-              this.postList = events["posts"]
-            }
-            else if(type === "obituaries"){
-              this.postList = events["obituaries"]
-            }
-          },
-        (err:any) => console.error(err)
-        );
-    }
+    this.commonService.getContent().then(events => {
+      this.postList = this.type === "posts" ? events.posts : events.obituaries;
+    }).catch((err:any) => console.error(err));
+  }
 
 }

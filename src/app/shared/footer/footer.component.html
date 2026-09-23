@@ -1,19 +1,42 @@
 <footer id="footer">
   <div class="container">
-    <h3>St Thomas Marthoma Church Kallooppara</h3>
-    <p>PURAMATTOM P.O, 689 543<br>
-      kalloopparastmtc@gmail.com</p>
-    <div class="social-links">
-      <a href="https://www.facebook.com/stmtckallooppara" class="facebook"><i class="bx bxl-facebook"></i></a>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="assets/img/klpra_logo.png" alt="Church crest">
+        <div>
+          <h3>St. Thomas Mar Thoma Church</h3>
+          <span>Kallooppara</span>
+        </div>
+      </div>
+      <p class="footer-message">A faith community beside the Manimala River—worshipping, growing and serving together since 1909.</p>
+      <a href="https://www.facebook.com/stmtckallooppara" class="social-link" aria-label="Visit us on Facebook"><i class="bx bxl-facebook"></i></a>
     </div>
-    <div class="copyright">
-      <!-- &copy; Copyright <strong><span>MeFamily</span></strong>. All Rights Reserved -->
-      
-    </div> 
-    <div class="credits">
-      Designed by <a href="https://www.linkedin.com/in/joby-wilson-mathews-616a26123/">Joby Wilson Mathews</a>
+    <div class="footer-grid">
+      <div>
+        <span class="footer-label">Visit</span>
+        <p>M. North P.O, Puramattom<br>Kerala 689 543</p>
+      </div>
+      <div>
+        <span class="footer-label">Contact</span>
+        <a href="tel:+914692677205">+91 0469 2677205</a><br>
+        <a href="mailto:kalloopparastmtc@gmail.com">kalloopparastmtc@gmail.com</a>
+      </div>
+      <div>
+        <span class="footer-label">Sunday worship</span>
+        <p>Holy Qurbana<br>9:00 AM</p>
+      </div>
+      <div class="footer-links">
+        <span class="footer-label">Explore</span>
+        <a routerLink="/about-us">Our story</a>
+        <a routerLink="/events/posts">News &amp; events</a>
+        <a routerLink="/contact-us">Contact us</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 St. Thomas Mar Thoma Church, Kallooppara</span>
+      <span>Designed by <a href="https://www.linkedin.com/in/joby-wilson-mathews-616a26123/">Joby Wilson Mathews</a></span>
     </div>
   </div>
-</footer><!-- End Footer -->
+</footer>
 
-<a (click)="scroll()" *ngIf="showScrollUp" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<button type="button" (click)="scroll()" *ngIf="showScrollUp" class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>

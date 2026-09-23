@@ -22,16 +22,7 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
   }
   scroll(){
-   let pos = window.pageYOffset;
-   let header = document.querySelector<HTMLElement>('#header')
-   if(header){
-    let offset = header.offsetHeight
-    window.scrollTo({
-     top: pos - offset,
-     behavior: 'smooth'
-   });
-   }
-    
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
 }

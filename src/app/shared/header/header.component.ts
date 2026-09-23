@@ -47,9 +47,9 @@ export class HeaderComponent implements OnInit {
     }else{
       navbarElement.classList.add('navbar-mobile');
     }
-    let navBarMobile = document.getElementsByClassName( 'mobile-nav-toggle' )[ 0 ] as HTMLElement;
-    navBarMobile.classList.toggle('bi-list')
-    navBarMobile.classList.toggle('bi-x')
+    let navBarMobile = document.querySelector<HTMLElement>( '.mobile-nav-toggle i' );
+    navBarMobile?.classList.toggle('bi-list')
+    navBarMobile?.classList.toggle('bi-x')
   }
 
 }

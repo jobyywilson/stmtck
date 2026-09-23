@@ -1,251 +1,245 @@
-.church-name-start{
-    font-size: 16px;
-}
-.logo-img {
-    max-width: 90px;
-}
-.heading{
-    display: flex;
-    align-items: center;
-}
-.a{
-    text-decoration: none;
-}
-.logo-col{
-    padding: 0;
-}
-.church-name-full{
-    padding-bottom: 10px;
-}
-.about-us{
-    color: white;
+:host { display: block; }
+
+#header {
+  height: 92px;
+  z-index: 997;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(13, 41, 34, 0.82) !important;
+  box-shadow: none;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: height 220ms ease, background-color 220ms ease, box-shadow 220ms ease;
 }
 
-@media screen and (max-width: 600px) {
-    .church-name-start{
-        font-size: 12px;
-    }
-    .church-name-end{
-        font-size: 30px;
-    }
-    .logo-img {
-        max-width: 75px;
-        margin-top: 9px !important;
-    }
-    #header .logo {
-        padding: 0;
-        margin: 0;
-        max-height: 100px;
-        margin-top: 9px ;
-        margin-top: -6px;
-      }
-  
-    #header .logo h1 {
-        line-height: 0.7;
-    }
-  }
-
-@media screen and (max-width: 600px) {
-    .church-name-start{
-        font-size: 12px;
-    }
-    .church-name-end{
-        font-size: 30px;
-    }
-    .logo-img {
-        max-width: 75px;
-        margin-top: 9px !important;
-    }
-    #header .logo {
-        padding: 0;
-        margin: 0;
-        max-height: 100px;
-        margin-top: 9px ;
-        margin-top: -6px;
-      }
-  
-    #header .logo h1 {
-        line-height: 0.7;
-    }
-  }
-  .sub-heading{
-    size:10px;
+#header.header-scrolled {
+  height: 78px;
+  background: rgba(13, 41, 34, 0.97) !important;
+  box-shadow: 0 12px 32px rgba(7, 24, 20, 0.18);
 }
 
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
-/**
-* Desktop Navigation 
-*/
-.navbar {
-    padding: 0;
-  }
-  .navbar ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    list-style: none;
-    align-items: center;
-  }
-  .navbar li {
-    position: relative;
-  }
-  .navbar a, .navbar a:focus {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 0 10px 30px;
-    font-size: 16px;
-    font-weight: 500;
-    color: white;
-    white-space: nowrap;
-    transition: 0.3s;
-  }
-  .navbar a i, .navbar a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
-  }
-  .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-    color: #fff;
-  }
-  .navbar .dropdown ul {
-    display: block;
-    position: absolute;
-    left: 14px;
-    top: calc(100% + 30px);
-    margin: 0;
-    padding: 10px 0;
-    z-index: 99;
-    opacity: 0;
-    visibility: hidden;
-    background: #fff;
-    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-    transition: 0.3s;
-    border-radius: 4px;
-  }
-  .navbar .dropdown ul li {
-    min-width: 200px;
-  }
-  .navbar .dropdown ul a {
-    padding: 10px 20px;
-    font-size: 15px;
-    color: #101c36;
-  }
-  .navbar .dropdown ul a i {
-    font-size: 12px;
-  }
-  .navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
-    color: #0291d9 !important;
-  }
-  .navbar .dropdown:hover > ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
-  }
-  .navbar .dropdown .dropdown ul {
-    top: 0;
-    left: calc(100% - 30px);
-    visibility: hidden;
-  }
-  .navbar .dropdown .dropdown:hover > ul {
-    opacity: 1;
-    top: 0;
-    left: 100%;
-    visibility: visible;
-  }
-  @media (max-width: 1366px) {
-    .navbar .dropdown .dropdown ul {
-      left: -90%;
-    }
-    .navbar .dropdown .dropdown:hover > ul {
-      left: -100%;
-    }
-  }
-  
-  /**
-  * Mobile Navigation 
-  */
-  .mobile-nav-toggle {
-    color: #fff;
-    font-size: 28px;
-    cursor: pointer;
-    display: none;
-    line-height: 0;
-    transition: 0.5s;
-  }
-  
-  @media (max-width: 991px) {
-    .mobile-nav-toggle {
-      display: block;
-    }
-  
-    .navbar ul {
-      display: none;
-    }
-  }
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+}
+
+.brand:hover { color: #fff; }
+
+.brand-mark {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  border: 0;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: none;
+}
+
+.logo-img { width: 52px; height: 52px; object-fit: contain; }
+
+.brand-copy { display: flex; flex-direction: column; line-height: 1.08; }
+.church-name-start {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.church-name-end {
+  color: #fff;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.72rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.navbar { padding: 0; }
+.navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.navbar li { position: relative; }
+.navbar a,
+.nav-dropdown-trigger {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.78);
+  font-family: "Manrope", sans-serif;
+  font-size: 0.77rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.navbar a:hover,
+.navbar a.active,
+.nav-dropdown-trigger:hover,
+.navbar li:hover > .nav-dropdown-trigger {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.nav-dropdown-trigger i { font-size: 0.65rem; transition: transform 180ms ease; }
+.dropdown:hover .nav-dropdown-trigger i { transform: rotate(180deg); }
+
+.navbar a.contact-link {
+  margin-left: 8px;
+  padding-left: 19px;
+  padding-right: 19px;
+  border: 0;
+  color: #fff;
+}
+.navbar a.contact-link:hover { border-color: #c99a45; background: #c99a45; }
+
+.navbar .dropdown ul {
+  position: absolute;
+  top: calc(100% + 16px);
+  left: 50%;
+  display: block;
+  width: 230px;
+  padding: 10px;
+  opacity: 0;
+  visibility: hidden;
+  border: 1px solid rgba(24, 49, 43, 0.09);
+  border-radius: 16px;
+  background: #fffdf9;
+  box-shadow: 0 22px 60px rgba(7, 24, 20, 0.2);
+  transform: translate(-50%, 8px);
+  transition: opacity 180ms ease, visibility 180ms ease, transform 180ms ease;
+}
+.navbar .dropdown ul::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: calc(50% - 7px);
+  width: 14px;
+  height: 14px;
+  background: #fffdf9;
+  transform: rotate(45deg);
+}
+.navbar .dropdown:hover > ul {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+.navbar .dropdown ul li { width: 100%; }
+.navbar .dropdown ul a {
+  display: flex;
+  width: 100%;
+  min-height: 0;
+  padding: 9px 12px;
+  border-radius: 9px;
+  color: #53645f;
+  font-size: 0.78rem;
+}
+.navbar .dropdown ul a:hover { background: #edf2ee; color: #173b31; }
+
+.mobile-nav-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 1.35rem;
+}
+
+@media (max-width: 991px) {
+  #header, #header.header-scrolled { height: 78px; }
+  .brand-mark { width: 50px; height: 50px; }
+  .logo-img { width: 45px; height: 45px; }
+  .church-name-start { font-size: 0.7rem; }
+  .church-name-end { font-size: 1.42rem; }
+  .mobile-nav-toggle { display: grid; place-items: center; }
+  .navbar > ul { display: none; }
+
   .navbar-mobile {
     position: fixed;
-    overflow: hidden;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background: rgba(27, 49, 94, 0.9);
-    transition: 0.3s;
+    inset: 0;
     z-index: 999;
+    display: block;
+    padding: 92px 20px 20px;
+    background: rgba(7, 24, 20, 0.88);
+    backdrop-filter: blur(18px);
+  }
+  .navbar-mobile > ul {
+    display: block;
+    width: min(420px, 100%);
+    max-height: calc(100vh - 120px);
+    margin: 0 auto;
+    padding: 18px;
+    overflow-y: auto;
+    border-radius: 22px;
+    background: #fffdf9;
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.32);
   }
   .navbar-mobile .mobile-nav-toggle {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 20px;
+    right: 20px;
   }
-  .navbar-mobile ul {
-    display: block;
-    position: absolute;
-    top: 55px;
-    right: 15px;
-    bottom: 15px;
-    left: 15px;
-    padding: 10px 0;
-    border-radius: 10px;
-    background-color: #fff;
-    overflow-y: auto;
-    transition: 0.3s;
+  .navbar-mobile li { width: 100%; }
+  .navbar-mobile a,
+  .navbar-mobile .nav-dropdown-trigger {
+    width: 100%;
+    justify-content: space-between;
+    padding: 13px 14px;
+    color: #18312b;
   }
-  .navbar-mobile a, .navbar-mobile a:focus {
-    padding: 10px 20px;
-    font-size: 15px;
-    color: #101c36;
+  .navbar-mobile a:hover,
+  .navbar-mobile a.active,
+  .navbar-mobile .nav-dropdown-trigger:hover { background: #edf2ee; color: #173b31; }
+  .navbar-mobile a.contact-link {
+    margin: 8px 0 0;
+    border: 0;
+    color: #18312b;
   }
-  .navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
-    color: #0291d9 !important;
-  }
-  .navbar-mobile .dropdown ul {
+  .navbar-mobile .dropdown ul,
+  .navbar-mobile .dropdown:hover > ul {
     position: static;
     display: none;
-    margin: 10px 20px;
-    padding: 10px 0;
-    z-index: 99;
+    width: 100%;
+    margin: 6px 0 10px;
+    padding: 8px;
     opacity: 1;
     visibility: visible;
-    background: #fff;
-    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    border: 0;
+    border-radius: 12px;
+    box-shadow: none;
+    transform: none;
+    background: #f2f4ef;
   }
-  .navbar-mobile .dropdown ul li {
-    min-width: 200px;
-  }
+  .navbar-mobile .dropdown ul::before { display: none; }
+  .navbar-mobile .dropdown > .dropdown-active,
+  .navbar-mobile .dropdown:hover > ul.dropdown-active { display: block; }
   .navbar-mobile .dropdown ul a {
-    padding: 10px 20px;
+    display: flex;
+    min-height: 0;
+    padding: 11px 12px;
+    color: #18312b;
+    font-size: 0.78rem;
   }
-  .navbar-mobile .dropdown ul a i {
-    font-size: 12px;
-  }
-  .navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
-    color: #0291d9 !important;
-  }
-  .navbar-mobile .dropdown > .dropdown-active {
-    display: block;
-  }
-  
+}
+
+@media (max-width: 430px) {
+  .brand { gap: 9px; }
+  .brand-mark { width: 44px; height: 44px; }
+  .logo-img { width: 39px; height: 39px; }
+  .church-name-start { font-size: 0.6rem; letter-spacing: 0.06em; }
+  .church-name-end { font-size: 1.25rem; }
+}

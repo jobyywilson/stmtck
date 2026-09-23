@@ -1,43 +1,38 @@
 <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex justify-content-between align-items-center">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a routerLink="/home" class="brand" aria-label="St. Thomas Mar Thoma Church home">
+      <span class="brand-mark">
+        <img src="assets/img/klpra_logo.png" alt="St. Thomas Mar Thoma Church crest" class="logo-img">
+      </span>
+      <span class="brand-copy">
+        <span class="church-name-start">St. Thomas Mar Thoma Church</span>
+        <span class="church-name-end">Kallooppara</span>
+      </span>
+    </a>
 
-      <div class="logo row heading">
-        <div class="col logo-col">
-          <a href="/"><img src="assets/img/klpra_logo.png" alt="" class="img-fluid logo-img "></a>
-        </div>
-        <div class="col logo-col church-name-full">
-          <h1 ><a class="church-name-start">St Thomas Marthoma Church</a></h1>
-          <h1><a class="church-name-end" >Kallooppara</a></h1>
-        </div>
-        
-      </div>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a  href="/home">Home</a></li>
-          <li class="dropdown" (click)="toggleDropdown()"><a class="about-us"><span>About us</span> <i class="bi bi-chevron-down" ></i></a>
-            <ul class="ul-dropdown">
-              <li><a href="/about-us">About</a></li>
-              <li><a href="/history">Historic Moments</a></li>
-              <li><a href="/parish-vicar">Parish Vicar</a></li>
-              <li><a href="/former-vicar">Former Vicars</a></li>
-              <li><a href="/founders">Founders</a></li>
-              <li><a href="/organisation">Organisation</a></li>
-              <li><a href="/office">Office bearers</a></li>
-              <li><a href="/events">News and Events</a></li>
-            </ul>
-          </li>
-          <!-- <li><a  href="/events">News and Events</a></li> -->
-          <!-- <li class="dropdown"><a href="#"><span>Downloads</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Parish Bulletn</a></li>
-              <li><a href="#">Downloads</a></li>
-            </ul>
-          </li> -->
-          <li><a href="/contact-us">Contact Us</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle" (click)="toggleNavBar()"></i>
-      </nav>
-
-    </div>
-  </header>
+    <nav id="navbar" class="navbar" aria-label="Primary navigation">
+      <ul>
+        <li><a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+        <li class="dropdown" (click)="toggleDropdown()">
+          <button type="button" class="nav-dropdown-trigger" aria-label="Open about menu">
+            <span>Discover</span><i class="bi bi-chevron-down"></i>
+          </button>
+          <ul class="ul-dropdown">
+            <li><a routerLink="/about-us">Our story</a></li>
+            <li><a routerLink="/history">Historic moments</a></li>
+            <li><a routerLink="/parish-vicar">Parish vicar</a></li>
+            <li><a routerLink="/former-vicar">Former vicars</a></li>
+            <li><a routerLink="/founders">Founders</a></li>
+            <li><a routerLink="/organisation">Organisations</a></li>
+            <li><a routerLink="/office">Office bearers</a></li>
+          </ul>
+        </li>
+        <li><a routerLink="/events/posts" routerLinkActive="active">News &amp; events</a></li>
+        <li><a routerLink="/contact-us" routerLinkActive="active" class="contact-link">Contact</a></li>
+      </ul>
+      <button type="button" class="mobile-nav-toggle" (click)="toggleNavBar()" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+    </nav>
+  </div>
+</header>

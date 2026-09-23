@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import * as moment from 'moment';
-import { combineLatest, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class CommonService {
-  configUrl = 'https://api.github.com/repos/jobyywilson/stmtck/git/trees/master?recursive=1';
+  configUrl = 'assets/content-index.json';
 
   postInfo : any = [];
   eventsInfo : any = [];
   obituariesInfo : any = [];
+  private contentPromise?: Promise<{posts: any[], obituaries: any[]}>;
 
   constructor(private http: HttpClient) { }
 
@@ -19,52 +20,52 @@ export class CommonService {
     return this.doGet(this.configUrl);
   }
 
+  getContent(): Promise<{posts: any[], obituaries: any[]}> {
+    if (!this.contentPromise) {
+      this.contentPromise = this.getPostedInfo().toPromise()
+        .then((data: any) => this.mapPostedInfo(data))
+        .catch((error: any) => {
+          this.contentPromise = undefined;
+          throw error;
+        });
+    }
+    return this.contentPromise;
+  }
+
   doGet(url:string){
     return this.http.get<any>(url);
   }
 
   async getEventsInfo(){
-    let events = localStorage.getItem('events');
-    if(!events){
-      await this.loadInfo();
-    }
-    return localStorage.getItem('events');
+    const content = await this.getContent();
+    return JSON.stringify(content.posts);
   }
 
   async loadInfo(){
-    let combinedData = [this.getPostedInfo()]
-    combineLatest(combinedData).subscribe(
-      data => {
-        this.mapPostedInfo(data[0]);
-      },
-    (err:any) => console.error(err)
-    );
-
-    
-
+    await this.getContent();
   }
 
   async mapPostedInfo(data:any){
+    this.postInfo = [];
+    this.eventsInfo = [];
+    this.obituariesInfo = [];
     let eventPath = "src/assets/content/events/";
     let postsPath = "src/assets/content/posts/";
     let obituariesPath = "src/assets/content/obituaries/";
-    for(let file of data["tree"]){
-      let fileName = file.path;
-      
-      if(fileName.includes(eventPath)){
+    const loadedItems = await Promise.all(data["tree"].map(async (file: any) => {
+      const fileName = file.path;
+      const rawData = await this.doGet(fileName.replace("src/", "")).toPromise();
 
-        let event = await this.doGet(fileName.replace("src/","")).toPromise()
-        this.eventsInfo.push(this.mapEvent(event,fileName))
-      }
-      else if(fileName.includes(postsPath)){
-        let posts = await this.doGet(fileName.replace("src/","")).toPromise()
-        this.postInfo.push(this.mapPost(posts,fileName))
-        
-      }
-      else if(fileName.includes(obituariesPath)){
-        let obituary = await this.doGet(fileName.replace("src/","")).toPromise()
-        this.obituariesInfo.push(this.mapObituaries(obituary,fileName))
-      }
+      if (fileName.includes(eventPath)) return { type: 'event', value: this.mapEvent(rawData, fileName) };
+      if (fileName.includes(postsPath)) return { type: 'post', value: this.mapPost(rawData, fileName) };
+      if (fileName.includes(obituariesPath)) return { type: 'obituary', value: this.mapObituaries(rawData, fileName) };
+      return undefined;
+    }));
+
+    for (const item of loadedItems) {
+      if (item?.type === 'event') this.eventsInfo.push(item.value);
+      if (item?.type === 'post') this.postInfo.push(item.value);
+      if (item?.type === 'obituary') this.obituariesInfo.push(item.value);
     }
     this.postInfo.push(...this.eventsInfo);
     this.postInfo = this.postInfo.sort(function (left :any, right: any) {

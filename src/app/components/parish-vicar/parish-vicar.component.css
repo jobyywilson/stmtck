@@ -1,6 +1,8 @@
-#parish-vicar{
-    margin: 7rem 0rem 3rem 0rem;
-}
-.member-info{
-    padding-top: 20px;
-}
+#parish-vicar .row:last-child { align-items: center; }
+#parish-vicar .list-unstyled { padding: 28px; border: 1px solid rgba(24,49,43,.12); border-radius: 20px; background: #fffdf9; box-shadow: 0 10px 30px rgba(17,45,37,.08); }
+#parish-vicar .list-unstyled li { padding-bottom: 14px; border-bottom: 1px solid rgba(24,49,43,.09); }
+#parish-vicar .list-unstyled li:last-child { padding-bottom: 0; border: 0; }
+#parish-vicar .member { width: 100%; overflow: hidden; border-radius: 22px; background: #fffdf9; box-shadow: 0 16px 46px rgba(17,45,37,.12); }
+#parish-vicar .member-img img { width: 100%; border-radius: 22px 22px 0 0; }
+.member-info { padding: 20px 22px; }
+.member-info h6 { margin: 0; font-size: 1.45rem; }

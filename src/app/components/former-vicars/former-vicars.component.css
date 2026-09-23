@@ -1,46 +1,14 @@
-#team{
-  padding: 7rem 0rem 40px 0rem;
-}
-
-/* Team Section
---------------------------------*/
-#team {
-  background: #fff;
-}
+#team .row { row-gap: 24px; }
 #team .member {
-  text-align: center;
-  margin-bottom: 20px;
+  height: 100%; padding: 0 0 22px; overflow: hidden;
+  border: 1px solid rgba(24,49,43,.11); border-radius: 18px;
+  background: #fffdf9; text-align: center;
+  box-shadow: 0 10px 30px rgba(17,45,37,.05);
+  transition: transform 220ms ease, box-shadow 220ms ease;
 }
-#team .member .pic {
-  margin-bottom: 15px;
-  overflow: hidden;
-  height: 260px;
-}
-#team .member .pic img {
-  object-fit: contain;
-      height: 100%;
-      width: 100%;
-}
-#team .member h4 {
-  font-weight: 700;
-  margin-bottom: 2px;
-  font-size: 18px;
-}
-#team .member span {
-  font-style: italic;
-  display: block;
-  font-size: 13px;
-}
-#team .member .social {
-  margin-top: 15px;
-}
-#team .member .social a {
-  color: #b3b3b3;
-}
-#team .member .social a:hover {
-  color: #2dc997;
-}
-#team .member .social i {
-  font-size: 18px;
-  margin: 0 2px;
-}
+#team .member:hover { transform: translateY(-5px); box-shadow: 0 20px 44px rgba(17,45,37,.1); }
+#team .member .pic { height: 275px; margin-bottom: 20px; overflow: hidden; background: #e8eee9; }
+#team .member .pic img { width: 100%; height: 100%; object-fit: contain; transition: transform 400ms ease; }
+#team .member:hover .pic img { transform: scale(1.025); }
+#team .member h4 { margin: 0 16px 4px; color: #18312b; font-size: 1.35rem; }
+#team .member span { color: #c99a45; font-size: .68rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }

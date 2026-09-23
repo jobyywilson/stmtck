@@ -1,5 +1,4 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { combineLatest } from 'rxjs';
 import { CommonService } from 'src/app/services/common.service';
 declare var Swiper: any;
 
@@ -23,15 +22,11 @@ export class HomeComponent implements OnInit {
   }
 
   loadData(){
-    this.commonService.getPostedInfo().subscribe(
-          async (data:any) => {
-            let events = await this.commonService.mapPostedInfo(data)
-            this.postList = events["posts"];
-            this.obituaryList = events["obituaries"];
-          },
-        (err:any) => console.error(err)
-        );
-    }
+    this.commonService.getContent().then(events => {
+      this.postList = events.posts;
+      this.obituaryList = events.obituaries;
+    }).catch((err:any) => console.error(err));
+  }
 
   
 
