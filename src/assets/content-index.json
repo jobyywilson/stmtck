@@ -5,6 +5,7 @@
     { "path": "src/assets/content/obituaries/rev-dr-alex-thomas.json" },
     { "path": "src/assets/content/obituaries/cherian-chacko-thampi.json" },
     { "path": "src/assets/content/obituaries/tharuni-saramma.json" },
+    { "path": "src/assets/content/obituaries/k-m-skariah.json" },
     { "path": "src/assets/content/posts/112-th-parish-day-celebration-on-14th-november-2021.json" },
     { "path": "src/assets/content/posts/eraviperoor-centre-kalamalsaram-overall-championship.json" },
     { "path": "src/assets/content/posts/farewell-conference.json" },
@@ -23,6 +24,9 @@
     { "path": "src/assets/content/posts/vbs-2025.json" },
     { "path": "src/assets/content/posts/vbs-day-2-environmental-day.json" },
     { "path": "src/assets/content/posts/wall-painting.json" },
-    { "path": "src/assets/content/posts/welcoming-rev-jacob-varghese-achen-and-family.json" }
+    { "path": "src/assets/content/posts/welcoming-rev-jacob-varghese-achen-and-family.json" },
+    { "path": "src/assets/content/posts/yuvajana-sakhyam-inauguration-2023.json" },
+    { "path": "src/assets/content/posts/yuvajana-sakhyam-kallooppara-2023.json" },
+    { "path": "src/assets/content/posts/mgu-sixth-rank-congratulations-2023.json" }
   ]
 }
