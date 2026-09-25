@@ -1,6 +1,10 @@
 {
   "tree": [
     { "path": "src/assets/content/obituaries/thomas-t-paul-lalu.json" },
+    { "path": "src/assets/content/obituaries/jeevan-k-jose.json" },
+    { "path": "src/assets/content/obituaries/rev-dr-alex-thomas.json" },
+    { "path": "src/assets/content/obituaries/cherian-chacko-thampi.json" },
+    { "path": "src/assets/content/obituaries/tharuni-saramma.json" },
     { "path": "src/assets/content/posts/112-th-parish-day-celebration-on-14th-november-2021.json" },
     { "path": "src/assets/content/posts/eraviperoor-centre-kalamalsaram-overall-championship.json" },
     { "path": "src/assets/content/posts/farewell-conference.json" },

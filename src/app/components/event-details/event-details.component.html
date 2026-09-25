@@ -23,6 +23,9 @@
                         </div>
                       <div class="entry-content">
                         <p *ngIf="type=='posts' || type=='obituaries'">{{data.description}}</p>
+                        <a *ngIf="type=='obituaries' && data.sourceUrl" class="source-link" [href]="data.sourceUrl" target="_blank" rel="noopener noreferrer">
+                          View original notice on Facebook
+                        </a>
                       </div>
                       <div *ngIf="data.galleryImages?.length > 0 && type === 'posts'" id="portfolio" class="portfolio-area area-padding fix">
                           <div class="container">
